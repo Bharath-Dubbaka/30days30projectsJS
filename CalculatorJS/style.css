@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: tahoma;
+}
+
+.container{
+    padding-top: 5%;
+    background-color: palegoldenrod;
+     height: 100vh;
+    /*  this is for chrome extenstion */
+    /* width: 16rem; 
+    height: 14rem;  */
+
+}
+.contentbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    background-color:red;
+    border-radius: 15px;
+    min-height: 60vh;
+     margin: 0% 18% 15% 18%;
+    /* below for chrome ext */
+    /* margin: 0% 5% 15% 5%; */
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.display{
+    width: 100%;
+    padding: 2%;
+}
+
+/* INPUT STYLES */
+.display input{
+    width: 100%;
+    color: antiquewhite;
+    background-color: black;
+    height: 5rem;
+    border-radius: 10px;
+    text-align: end;
+    font-size:xx-large
+}
+
+.btns{
+    padding: 5%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: antiquewhite;
+}
+.btns:active {
+    background-color: yellowgreen;
+    color: black;
+  }
+
+.btnscolorvariant{
+    background-color: rgb(11, 11, 101);
+    color: white;
+    padding: 5%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.btnscolorvariantSPL{
+    background-color: rgb(11, 101, 38);
+    color: white;
+    padding: 5%;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.btnscolorvariantSPL:active {
+    background-color: yellowgreen;
+    color: black;
+  }
+
+.col1{
+    width: 100%;
+}
+.col2{
+    width: 100%;
+}
+.col3{
+    width: 100%;
+}
+.col4{
+    width: 100%;
+}

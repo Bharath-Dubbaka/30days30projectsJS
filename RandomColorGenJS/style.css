@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    background-color: #19172E;
+    font-weight: bolder;
+}
+
+.container{
+    text-align: center;
+
+}
+
+.heading{
+    font-size: 30px;
+    padding: 2% 0% 2% 0%;
+}
+
+.refreshandnote{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 15px;
+    padding: 1% 0% 1% 0%;
+    align-items: center;
+}
+.refresh{
+    /* margin: 2%; */
+    padding: 2%;
+
+    /* height: 100%;
+    width: 100%; */
+    border-radius: 15px;
+    background-color: #cb3b3b;
+    border: 0.5px rgb(225, 245, 225) solid;
+}
+/* .refrbtn{ */
+    /* padding: 15%; */
+    /* min-height: max-content; */
+    /* border-radius: 15px;
+    background-color: #cb3b3b; */
+    /* height: 10rem; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+/* } */
+.note{
+    background-color: grey;
+    padding: 2%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center; /* Align horizontal */
+    align-items: center; /* Align vertical */
+
+}
+.refresh:hover{
+    background-color: lightseagreen;
+    color: #19172E;
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.box{
+    width: 30%;
+    border-radius: 15px;    
+    height: 8rem;
+    /* text-align: center; */
+    margin: 1px;
+    /* line-height: 5rem; */
+    /* OR you can do above if you have assigned value to height */
+    display: flex;
+    justify-content: center; /* Align horizontal */
+    align-items: center; /* Align vertical */
+}

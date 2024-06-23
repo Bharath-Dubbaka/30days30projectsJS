@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.container{
+    background-color: #19172e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    color: white;
+    padding: 0 3rem 0 3rem;
+
+}
+.insideBox{
+    position: absolute;
+    top:5rem    ;
+}
+.heading{
+    /* position: absolute; */
+    text-align: center;
+    /* top: 0; */
+    padding-bottom: 20px;
+    margin-top: 20px;
+    font-size: 2.8rem;
+    font-weight: bolder;
+    color: #9B6F9B;
+
+}
+.content{
+    background-color: #383558;
+    border-radius: 10px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    box-sizing: content-box;
+    min-width: fit-content;
+    max-width: max-content;
+    align-items: center;
+    border-radius: 36px;
+    font-size: xx-large;
+    
+}
+
+.timeInputs{
+    margin: 0.3rem;
+    padding: 1rem;
+    background-color:  #4c496d;
+    border-radius: 15px;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 3rem;
+    width: 100%;
+    color: white;
+    text-align: center;
+}

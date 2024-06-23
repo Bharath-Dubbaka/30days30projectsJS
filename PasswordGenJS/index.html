@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">Random Password Generator</div>
+        <div class="card">
+            <div class="content">
+                <div class="output">
+                    <input type="text" class="fieldsOutput" readonly>
+                </div>
+                <div class="input">
+                    <input type="number" value="8" class="fieldsInput">
+                </div>
+                <div class="checks">
+                    <label for="caps" class="check">
+                        <input type="checkbox" name="caps" checked="on" id="caps">
+                        Lowercase (a-z)
+                    </label>
+                    <label for="nocaps" class="check">
+                        <input type="checkbox" name="nocaps" checked="on" id="nocaps">
+                        Uppercase (A-Z)
+                    </label>
+                    <label for="symbols" class="check">
+                        <input type="checkbox" name="symbols" checked="on" id="symbols">
+                        Symbols (@-*)
+                    </label>
+                    <label for="numbers" class="check">
+                        <input type="checkbox" name="numbers" checked="on" id="numbers">
+                        Numbers (0-9)
+                    </label>
+                </div>
+                <div class="submit">Generate</div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

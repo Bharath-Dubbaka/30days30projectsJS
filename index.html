@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h1>30 Days of JavaScript</h1>
+            <input id="searchbar" onkeyup="search_project() "  type="text" name="search" placeholder='Search projects.....' />
+            <ul id="suggestion-list">
+            </ul>
+            <!-- Dark Mode Button -->
+            <button id="toggle" class="toggleButton" type="button" onclick="toggleDarkLight()">🌙</button>
+        </div>
+        <div class="main" id="projectsContainer">
+            <div class="item">
+              <img src="30DaysOfJavaScript/assets/01.png" alt="Drum Kit" />
+              <h4>Drum Kit</h4>
+              <a target="_blank" href="https://github.com/swapnilsparsh/30DaysOfJavaScript/tree/master/01%20-%20Drum%20Kit">
+                <i class="fa-brands fa-square-github"></i>
+                <a target="_blank" href="TodoJS/index.html"><i class="fa-solid fa-link"></i> </a>
+              </a>
+              <div class="description">
+                <p>
+                  Jam out with this interactive JavaScript Drum Kit.  Trigger realistic drum sounds by pressing keyboard keys or clicking on virtual drum pads.  
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
