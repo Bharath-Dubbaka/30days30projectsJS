@@ -11,6 +11,11 @@ function updateTime() {
     timeInputHrs.innerHTML = new Date().getHours();
     timeInputAMPM.innerHTML = "AM";
   }
+  if (hours.toString().length < 2) {
+    timeInputHrs.innerHTML = `0${hours}`;
+  } else {
+    timeInputHrs.innerHTML = hours;
+  }
 
   let mins = new Date().getMinutes();
   if (mins.toString().length < 2) {
