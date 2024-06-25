@@ -1,8 +1,8 @@
-# [[30 Days Of 30projectsJavaScript](https://30days30projectsjs.netlify.app/)] [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# [[30Days30JSprojects](https://30days30projectsjs.netlify.app/)] [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
 ## View Live Demo
 
-<pre><center><a href="https://30days30projectsjs.netlify.app/"><b>30daysofjs.netlify.app</b></a></center></pre>
+<pre><center><a href="https://30days30projectsjs.netlify.app/"><b>30days30projectsjs.netlify.app</b></a></center></pre>
 
 <table>
   <tr><th></th><th></th></tr>
@@ -55,4 +55,4 @@
 
 ## Code of Conduct
 
-To maintain a safe and inclusive space for everyone to learn and grow, contributors are advised to follow the [Code of Conduct](./CODE_OF_CONDUCT.md).
+To maintain a safe and inclusive space for everyone to learn and grow, contributors are advised to follow the Code of Conduct
