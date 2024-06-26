@@ -51,7 +51,7 @@
     margin: 1rem;
     /* border-radius: 1rem; */
     border-radius: 15px;
-background: linear-gradient(145deg, #212033, #28253d);
+background: linear-gradient(145deg, #4e4c7830, #28253d);
 box-shadow:  8px 8px 16px #252338,
              -8px -8px 16px #25233a;
 }
@@ -83,7 +83,7 @@ i{
     /* border: 1px solid #ffffff; */
     filter: drop-shadow(10px);
     filter: contrast(110%);
-    background-color: #684756;
+    background-color: #252339;
 }
 
 
