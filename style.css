@@ -51,7 +51,7 @@
     margin: 1rem;
     /* border-radius: 1rem; */
     border-radius: 15px;
-background: linear-gradient(145deg, #4e4c7830, #28253d);
+background: linear-gradient(155deg, #28253d,#4e4c7830);
 box-shadow:  8px 8px 16px #252338,
              -8px -8px 16px #25233a;
 }
