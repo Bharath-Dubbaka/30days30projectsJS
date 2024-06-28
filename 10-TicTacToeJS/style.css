@@ -14,7 +14,7 @@ body{
    background-color: #F8F4E3;
     height: 100vh;
     width: 100vw;
-    padding: 5% 5% 5% 5%;
+    padding: 3%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,31 +30,48 @@ body{
 .sides{
     display: flex;
     width: 100%;
-}
-.row1{
-    width: 100%;
-    /* margin: 0.3rem; */
-}
-.row2{
-    width: 100%;
-    /* margin: 0.3rem; */
-}
-.row3{
-    width: 100%;
-    /* margin: 0.3rem; */
+    /* padding: 1px; */
+    justify-content: space-evenly;
 }
 .content{
     display: flex;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
     border-radius: 15px;
-    border-radius: 50px;
+    border-radius: 15px;
     background-color: #19172E;
-    width: 60%;
+    width: 59%;
     /* padding:1rem 1rem 1rem 1rem; */
     color: white;
-    margin-right: 1rem;
+    margin: 0.1rem;
+    padding:1px;
+    /* justify-content: center; */
+    /* align-items: center;
+        justify-content: center; */
+
 }
+.row1{
+    width: 99%;
+    /* margin: 0.3rem; */
+    display: flex;
+    flex-direction: row;
+    /* padding: 1px; */
+}
+.row2{
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    /* margin: 0.3rem;
+    padding: 1px; */
+}
+.row3{
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    /* margin: 0.3rem;
+    padding: 1px; */
+}
+
 .box{
     background-color: #8D91C7;
     width: 100%;
@@ -65,8 +82,8 @@ body{
     /* text-align: center; */
     justify-content: center;
     align-items: center;
-    border-radius: 15px;
-    /* margin: 0.3rem; */
+    border-radius: 10px;
+    margin: 0.3rem;
 }
 .dashboard{
     width: 40%;
@@ -77,10 +94,11 @@ body{
     border: 1px solid saddlebrown;
     border-radius: 15px;
     justify-content: space-evenly;
+    margin : 0.1rem
 }
 .status{
     height: 30%;
-    width: 90%;
+    width: 95%;
     border: 1px solid black;
     border-radius: 15px;
     display: flex;
@@ -103,7 +121,7 @@ body{
 } */
 .removeBtn{
     height: 30%;
-    width: 90%;
+    width: 95%;
     border: 1px solid black;
     border-radius: 15px;
     display: flex;
