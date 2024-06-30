@@ -3,8 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: aliceblue;
-    background-color: #19172E;
+    color: white;
+    background-color: whitesmoke;
     font-weight: bolder;
 }
 
@@ -16,6 +16,8 @@
 .heading{
     font-size: 30px;
     padding: 2% 0% 2% 0%;
+    font-family: 'Comfortaa', cursive;
+    color: #19172E;
 }
 
 .refreshandnote{
@@ -24,6 +26,7 @@
     font-size: 15px;
     padding: 1% 0% 1% 0%;
     align-items: center;
+    
 }
 .refresh{
     /* margin: 2%; */
@@ -34,6 +37,8 @@
     border-radius: 15px;
     background-color: #cb3b3b;
     border: 0.5px rgb(225, 245, 225) solid;
+    font-family: 'Comfortaa', cursive;
+
 }
 /* .refrbtn{ */
     /* padding: 15%; */
@@ -52,6 +57,7 @@
     display: flex;
     justify-content: center; /* Align horizontal */
     align-items: center; /* Align vertical */
+    font-family: 'Comfortaa', cursive;
 
 }
 .refresh:hover{
@@ -74,4 +80,5 @@
     display: flex;
     justify-content: center; /* Align horizontal */
     align-items: center; /* Align vertical */
+    font-family: 'Comfortaa', cursive;
 }
