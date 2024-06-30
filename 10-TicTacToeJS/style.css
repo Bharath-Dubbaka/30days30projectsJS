@@ -8,11 +8,11 @@
 body{
     min-height: 100vh;
     background-color: darkorange;
-
+    display: flex;
+    flex-direction: column;
 }
 /* header */
 .header {
-    background-color: hsla(31, 15%, 50%, .1);
     background-color: rgb(237, 237, 237);
 
 }
@@ -194,16 +194,15 @@ body{
 /* FOOTER */
 /* Footer */
 
-footer {
+.footer {
     padding: 10px;
     padding: 0.6rem;
     background: #404040;
     color: #CCC;
     font-size: .75em;
     text-align: center;
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    margin-top: auto;
   }
   
   footer a {
