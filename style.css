@@ -66,6 +66,7 @@ box-shadow:  8px 8px 16px #2a2931,
 .links{
     display: flex;
     width: 100%;
+    padding: 1rem;
 }
 .projectName{
     width: 70%;
