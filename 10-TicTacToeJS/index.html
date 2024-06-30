@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tak Toe</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
 </head>
 <body>
-    <!-- <header>
+    <header>
         <div class="header">
-          <div class="titles">
-            <h1 class="title"><i class="fas fa-snowflake fa-spin"></i> Bharath Dubbaka</h1>
-            <h2 class="subtitle">Front End Web Developer</h2>
-          </div>
+            <div class="titles">
+            <div class="title">
+                Bharath Dubbaka
+            </div>
+            <div class="subtitle">Front End Web Developer</div>
+            </div>
         </div>
-    </header> -->
+    </header>
     <div class="container">
         <div class="heading">Tic Tac Toe</div>
         <div class="sides">
@@ -40,15 +45,15 @@
                 </div>
                 <div class="scoreboard">
                         <div class="xwins">                            
-                            <div class="title">XW</div>
+                            <div class="scoretitle">XW</div>
                             <div class="headNums">0</div>
                         </div>
                         <div class="ties">
-                            <div class="title">Ties</div>
+                            <div class="scoretitle">Ties</div>
                             <div class="headNums">0</div>
                         </div>
                         <div class="owins">
-                            <div class="title">OW</div>
+                            <div class="scoretitle">OW</div>
                             <div class="headNums">0</div>
                         </div>
                 </div>
@@ -57,8 +62,23 @@
                 </div>
             </div>
         </div>
-        
     </div>
+    <footer class="footer">
+        <span class="social">
+            <a href="https://github.com/gustavoparolin" title="Source code at GitHub" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        </span>
+        <span class="social">
+            <a href="https://www.linkedin.com/in/gustavo-parolin/" title="Professional perfil at LinkedIn" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </span>
+        <span class="social">
+            <a href="http://www.parolin.net/" title="Portfolio" target="_blank"><i class="fas fa-user-circle fa-2x"></i></a>
+        </span>
+        <div class="credits">
+            <span class="credit">
+            <a href="mailto:gustavo@parolin.net">bharath.reactdev@gmail.com</a>
+            </span>
+        </div>
+    </footer>
     <script type="module" src="app.js"></script>
 </body>
 </html>
