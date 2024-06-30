@@ -3,11 +3,14 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: white;
-    background-color: whitesmoke;
     font-weight: bolder;
 }
-
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+}
 .container{
     text-align: center;
 
@@ -18,6 +21,7 @@
     padding: 2% 0% 2% 0%;
     font-family: 'Comfortaa', cursive;
     color: #19172E;
+    background-color: lightgray;
 }
 
 .refreshandnote{
@@ -35,9 +39,11 @@
     /* height: 100%;
     width: 100%; */
     border-radius: 15px;
-    background-color: #cb3b3b;
+    background-color: black;
     border: 0.5px rgb(225, 245, 225) solid;
     font-family: 'Comfortaa', cursive;
+    color: white;
+
 
 }
 /* .refrbtn{ */
@@ -51,17 +57,18 @@
     align-items: center; */
 /* } */
 .note{
-    background-color: grey;
+    background-color: black;
     padding: 2%;
     border-radius: 15px;
     display: flex;
     justify-content: center; /* Align horizontal */
     align-items: center; /* Align vertical */
     font-family: 'Comfortaa', cursive;
+    color: white;
 
 }
 .refresh:hover{
-    background-color: lightseagreen;
+    background-color: rgb(32, 178, 61);
     color: #19172E;
 }
 .boxes{
@@ -81,4 +88,39 @@
     justify-content: center; /* Align horizontal */
     align-items: center; /* Align vertical */
     font-family: 'Comfortaa', cursive;
+    color: black;
+    font-weight: 600;
 }
+
+.footer {
+    padding: 10px;
+    padding: 0.6rem;
+    background-color:black;
+    font-size: .75em;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+    
+  }
+  
+  footer a {
+    padding-bottom: 1px;
+    border: 0;
+    color: lightgray;
+    text-decoration: none;
+  }
+  
+  footer a:active, footer a:focus, footer a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  /* .social{
+    background-color: black;
+    color: goldenrod;
+  }
+
+  .svg-inline{
+    background-color: grey;
+    color: goldenrod;
+  } */
