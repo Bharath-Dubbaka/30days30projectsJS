@@ -5,9 +5,16 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     
 }
+body{
+    min-height: 100vh;
+    background-color: darkorange;
+
+}
 /* header */
-.header{
-    background-color: hsla(31, 15%, 50%, .1);;
+.header {
+    background-color: hsla(31, 15%, 50%, .1);
+    background-color: rgb(237, 237, 237);
+
 }
 .titles{
     display: flex;
@@ -39,11 +46,10 @@
 
 
 .container{
-   background-color: darkorange;
    scroll-behavior:smooth;
     width: 100%;
     /* min-height:5vh; */
-    height: 93vh;
+    /* height: 93vh; */
     padding: 3% 0 3% 0;
     display: flex;
     flex-direction: column;
@@ -56,7 +62,7 @@
     font-weight: bolder;
     color: black;
     border: 1px solid black;
-    background-color: #fff;
+    /* background-color: #fff; */
     border-radius: 10px;
     padding: 0.5rem;
     font-family: 'Permanent Marker', cursive;
@@ -195,6 +201,9 @@ footer {
     color: #CCC;
     font-size: .75em;
     text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
   
   footer a {
@@ -221,9 +230,9 @@ footer {
     .subtitle{
         display: none;
     }
-    .container{
+    /* .container{
         min-height: 35rem;
-    }
+    } */
     .sides{
         display: flex;
         flex-direction: column;
