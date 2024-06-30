@@ -1,4 +1,4 @@
-# [[30Days30JSprojects](https://30days30projectsjs.netlify.app/)] [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
+# [[30Days30JSprojects](https://30days30projectsjs.netlify.app/)]
 
 ## View Live Demo
 
