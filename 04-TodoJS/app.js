@@ -27,17 +27,30 @@ btnInput.addEventListener("click", (e) => {
     check.style.backgroundColor = "white";
     check.innerHTML = "\u00d7";
     check.className = "doneBtn";
+    check.id = "false";
 
     // check.type = "checkbox";
     // check.checked = false;
     // check.id = contentDiv.innerHTML
     // check.id = "radio";
     // check.name = "radio";
-    check.addEventListener("click", function (e) {
-      check.style.backgroundColor = "orange";
-      check.nextSibling.style.textDecoration = "line-through";
-    });
-    let slash = false;
+
+    // CHECK
+    // check.addEventListener("click", function (e) {
+    //   if (check.id == "false") {
+    //     check.id = "true";
+    //     check.style.backgroundColor = "black";
+    //     check.nextSibling.style.textDecoration = "line-through";
+    //     contentDiv.style.color = "black";
+    //     deleteBtn.style.color = "ghostwhite";
+    //   } else {
+    //     check.id = "false";
+    //     check.style.backgroundColor = "white";
+    //     check.nextSibling.style.textDecoration = "none";
+    //     contentDiv.style.color = "ghostwhite";
+    //     deleteBtn.style.color = "black";
+    //   }
+    // });
 
     // contentDiv.appendChild(deleteBtn);
 
@@ -79,6 +92,26 @@ list.addEventListener("click", function (e) {
     deleNode.remove();
     console.log(list);
   }
+  if (e.target.className == "doneBtn") {
+    if (e.target.id == "false") {
+      e.target.id = "true";
+      // e.target.style.backgroundColor = "black";
+      e.target.nextSibling.style.textDecoration = "line-through";
+      e.target.nextSibling.style.color = "black";
+      e.target.style.color = "black";
+      e.target.style.border = "3px solid darkorange";
+      e.target.nextSibling.nextSibling.style.color = "ghostwhite";
+    } else {
+      e.target.id = "false";
+      // e.target.style.backgroundColor = "white";
+      e.target.nextSibling.style.textDecoration = "none";
+      e.target.nextSibling.style.color = "ghostwhite";
+      e.target.style.border = "1px solid black";
+      e.target.style.color = "darkorange";
+      // e.target.style.color = "black";
+      e.target.nextSibling.nextSibling.style.color = "black";
+    }
+  }
   saveData();
   e.preventDefault();
 });
@@ -86,28 +119,30 @@ list.addEventListener("click", function (e) {
 // listItem.forEach((each) => {
 //   console.log(each);
 // });
-list.addEventListener("click", function (e) {
-  if (e.target.className == "listitem") {
-    if ((e.target.id = "false")) {
-      e.target.id = "true";
-      e.target.style.textDecoration = "line-through";
-      e.target.style.color = "white";
-    } else if ((e.target.id = "true")) {
-      e.target.id = "false";
-      mainDiv.style.textDecoration = "none";
-      mainDiv.style.color = "#22223B";
-    }
-  }
-  saveData();
-});
+
+// list.addEventListener("click", function (e) {
+//   if (e.target.className == "listitem") {
+//     if ((e.target.id = "false")) {
+//       e.target.id = "true";
+//       e.target.style.textDecoration = "line-through";
+//       e.target.style.color = "white";
+//     } else if ((e.target.id = "true")) {
+//       e.target.id = "false";
+//       mainDiv.style.textDecoration = "none";
+//       mainDiv.style.color = "#22223B";
+//     }
+//   }
+//   saveData();
+// });
 
 function saveData() {
-  console.log(list.innerHTML);
+  // console.log(list.innerHTML);
   localStorage.setItem("data", list.innerHTML);
 }
 
 function showTasks() {
   list.innerHTML = localStorage.getItem("data");
+  console.log(localStorage.getItem("data"));
 }
 
 showTasks();
