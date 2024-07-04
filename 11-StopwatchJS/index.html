@@ -3,29 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palindrome Checker</title>
+    <title>Stopwatch</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
-
 </head>
 <body>
     <header>
         <div class="header">
             <div class="titles">
                 <div class="title">
-                     Palindrome Checker
+                     Stopwatch
                 </div>
                 <div class="subtitle">< / > by Bharath Dubbaka</div>
             </div>
         </div>
     </header>
     <div class="container">
-            <div class="welcomeNote">Enter a sentence, word or number to check if it's a palindrome:</div>
-            <input type="text" class="palindromeInput">
-            <button class="checker">Check</button>
-            <button class="clearScreen">Clear Screen</button>
-            <div class="result"></div>
+        <div class="timediv">
+            <div class="hours time">00</div>
+            <div class="timeSeperate">:</div>
+            <div class="minutes time">00</div>
+            <div class="timeSeperate">:</div>
+            <div class="seconds time">00</div>
+        </div>
+        <div class="operations">
+            <button class="start">Start/Pause</button>
+            <button class="reset">Reset</button>
+            <!-- <button class="stop">Stop</button> -->
+            <button class="lap">Lap</button>
+        </div>
+        <div class="lapBox">
+            
+        </div>
     </div>
     <footer class="footer">
         <span class="social">

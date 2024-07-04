@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    box-sizing: border-box;
+}
+/* boilerplate CSS with header and basic start styles */
+:root{
+    --lightest-color: ghostwhite;
+    --light-color:#f8f0e3;
+    --dark-color:#f8f0e3;
+    --darkest-color:black;
+    --hightlight-color:darkorange;
+    --secodary-highlight-color: #252339;
+}
+body{
+    min-height: 100vh;
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+}
+/* header */
+.header {
+    background-color:black;
+    color: var(--lightest-color);
+    /* margin-bottom: 1.5rem; */
+
+
+}
+.titles{
+    display: flex;
+    width: 100%;
+    /* padding: 0.5rem; */
+    line-height: 1;
+}
+.title{
+    font-size: 1.5rem;
+    display: flex;
+    /* justify-content: end; */
+    margin:1rem ;
+    width: 60%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.5rem;
+    font-weight: 800;
+
+}
+.subtitle{
+    font-size: 0.99rem;
+    display: flex;
+    /* text-align: center; */
+    justify-content: end;
+    align-items:center;
+    margin:1rem ;
+    /* padding:0.5rem; */
+    width: 40%;
+    font-family: 'Comfortaa', cursive;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-align: end;
+    align-items: end;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* min-height: 100vh; */
+    color: white;
+    margin: 2rem auto;
+    /* enable below for chrome extension style */
+    /* width: 50rem;*/
+    /* border: 1px white solid;  */
+    background-color: var(--secodary-highlight-color);
+    padding: 2rem;
+    border-radius: 15px;
+}
+.timediv{
+    display: flex;
+}
+
+
+.time{
+    margin: 1rem;
+    padding: 1rem;
+    background-color: var(--light-color);
+    color: var(--secodary-highlight-color);
+    font-size: 1.5rem;
+    min-width: 4rem;
+    text-align: center;
+}
+.timeSeperate{
+    margin: 1rem 0;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+}
+button{
+    width: 5rem;
+    height: 2rem;
+}
+
+/* footer */
+.footer {
+    padding: 10px;
+    padding: 0.6rem;
+    background: var(--lightest-color);
+    font-size: .75em;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+  }
+  
+  footer a {
+    padding-bottom: 1px;
+    border: 0;
+    color: var(--darkest-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  footer a:active, footer a:focus, footer a:hover {
+    color: darkorange;
+    text-decoration: underline;
+  }
+
+
+  /* MEdia queries  */
+@media (max-width: 775px) {
+    .heading{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .welcomeNote{
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 475px) {
+    .titles{
+        padding: 0.3rem;
+    }
+    .title {
+        font-size: 1.3em;
+        width: 100%; 
+        justify-content: center;
+    }
+    .subtitle{
+        /* font-size: 0.6em; */
+        display: none;
+    }
+    .container{
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
