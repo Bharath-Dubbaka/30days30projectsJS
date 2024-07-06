@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <!-- <link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'> -->
+</head>
+<body> 
+    <header>
+        <div class="header">
+            <div class="titles">
+                <div class="title">
+                    CountdownTimer
+                </div>
+                <div class="subtitle"><\> by Bharath Dubbaka</div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <p>NEW WORLD</p>
+        <div class="timediv">
+            <div class="hoursMain holder">
+                <p>Hours</p>
+                <input type="number" name="hours" id="hours" class="hours time" max="59" min="0" value="0" readonly>
+                <div class="plusminus">
+                    <button type="button" class="btnabove plus">+</button>
+                    <button type="button" class="btnabove minus">-</button>
+                </div>
+            </div>
+            <div class="timeSeperate">:</div>
+            <div class="minutesMain holder">
+                <p>Minutes</p>
+                <input type="number" name="minutes" id="minutes" class="minutes time" max="59" min="0" value="0">
+                <div class="plusminus">
+                    <button type="button" class="btnabove plus">+</button>
+                    <button type="button" class="btnabove minus">-</button>
+                </div>
+            </div>
+            <div class="timeSeperate">:</div>
+            <div class="secondsMain holder">
+                <p>Seconds</p>
+                <input type="number" name="seconds" id="seconds" class="seconds time" max="59" min="0" value="0">
+                <div class="plusminus">
+                    <button type="button" class="btnabove plus">+</button>
+                    <button type="button" class="btnabove minus">-</button>
+                </div>
+            </div>
+        </div>
+        <div class="operations">
+            <button class="start btnbottom">Start/Stop</button>
+            <button class="reset btnbottom">Reset</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <span class="social">
+            <a href="https://github.com/Bharath-Dubbaka" title="Source code at GitHub" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        </span>
+        <span class="social">
+            <a href="https://www.linkedin.com/in/bharath-kumar-4bb399208/" title="Professional perfil at LinkedIn" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+        </span>
+        <span class="social">
+            <a href="https://bharath-dubbaka-portfolio.netlify.app/" title="Portfolio" target="_blank"><i class="fas fa-user-circle fa-2x"></i></a>
+        </span>
+        <div class="credits">
+            <span class="credit">
+            <a href="mailto:bharath.reactdev@gmail.com">bharath.reactdev@gmail.com</a>
+            </span>
+        </div>
+    </footer>
+    <script type="module" src="app.js"></script>
+</body>
+</html>
