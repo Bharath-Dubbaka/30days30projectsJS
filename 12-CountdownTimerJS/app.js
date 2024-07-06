@@ -1,4 +1,5 @@
 let plus = document.querySelectorAll(".plus");
+let minus = document.querySelectorAll(".minus");
 let seconds = document.querySelector(".seconds");
 let minutes = document.querySelector(".minutes");
 let hours = document.querySelector(".hours");
@@ -14,6 +15,13 @@ let plusFn = function (e) {
   val = parseInt(val);
   if (val <= 59) {
     e.target.parentElement.previousElementSibling.value = val + 1;
+  }
+};
+let minusFn = function (e) {
+  let val = e.target.parentElement.previousElementSibling.value;
+  val = parseInt(val);
+  if (val <= 59) {
+    e.target.parentElement.previousElementSibling.value = val - 1;
   }
 };
 let timer = function (params) {
@@ -44,6 +52,9 @@ let timer = function (params) {
 
 plus.forEach((element) => {
   element.addEventListener("click", plusFn);
+});
+minus.forEach((element) => {
+  element.addEventListener("click", minusFn);
 });
 
 start.addEventListener("click", function (params) {
