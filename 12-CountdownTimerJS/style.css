@@ -106,21 +106,18 @@ input::-webkit-inner-spin-button {
 .plusminus{
     width: 100%;
 }
-.dull{
-    opacity: 50%;
-}
 .btnabove{
     width: 46%;
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 900;
     border: 1px solid lightgrey;
     border-radius: 5px;
 }
 .plus{
-    background-color: greenyellow;
+    background-color: rgb(171, 217, 101);
 }
 .minus{
-    background-color: darkred;
+    background-color: rgb(118, 66, 66);
     color: white;
 }
 
@@ -133,9 +130,10 @@ input::-webkit-inner-spin-button {
 
 .btnbottom{
     width: 7rem;
-    height: 2rem;
+    height: 3rem;
     font-weight: 900;
     border-radius: 5px;
+    font-size: 1.1rem;
     background-color: var(--dark-color);
 }
 .btnbottom:hover{
@@ -209,8 +207,10 @@ input::-webkit-inner-spin-button {
     }
     .btnbottom{
         width: 5.5rem;
-        height: 2rem;
+        height: 2.5rem;
         font-weight: 900;
+        font-size: 0.9rem;
+
     }
     .time{
         width: 4rem;
