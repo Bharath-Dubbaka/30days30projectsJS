@@ -76,6 +76,7 @@ body{
     background-color: var(--lightest-color);
     /* padding: 2rem; */
     position: relative;
+    border: 1px solid var(--darkest-color);
 }
 
 
@@ -85,6 +86,8 @@ body{
     /* background-color: aqua; */
     position: absolute;
     text-align: center;
+    font-weight: 900;
+    font-size: 1.3rem;
 }
 
 .clock .time12{
@@ -140,23 +143,26 @@ body{
     background-color: black;
 }
 .hours{
-    width: 3%;
-    height: 30%;
-    top: 20%;
-    left: 49%;
+    width: 3.5%;
+    height: 23%;
+    top: 26.5%;
+    left: 48.75%;
     /* display: none; */
     transform-origin: bottom;
-    background-color: green;
+    background-color: orange;
+    border-radius: 25px;
+    border: 5px solid black;
+
 
 }
 .minutes{
     width: 2%;
-    height: 35%;
-    top: 15%;
-    left: 49%;
-    background-color: rgb(225, 52, 101);
-    /* display: none; */
+    height: 32%;
+    top: 17%;
+    left: 50%;
+    background-color: var(--darkest-color);
     transform-origin: bottom;
+    border-radius: 15px;
 
 
 }
@@ -164,19 +170,20 @@ body{
     width: 1%;
     height: 40%;
     top: 9%;
-    left: 49%;
-    background-color: rgb(187, 16, 230);
+    left: 50%;
+    background-color:var(--darkest-color);
     transform-origin: bottom;
-
+    /* display: none; */
 }
 .dotcenter{
     width: 20px;
     height: 20px;
-    background-color: black;
+    background-color: var(--hightlight-color);
     border-radius: 50%;
     position: absolute;
-    left: 46%;
-    bottom: 46.5%;
+    left: 47.5%;
+    bottom: 47.5%;
+    border: 5px solid var(--darkest-color);
 }
 
 /* footer */
@@ -215,6 +222,9 @@ body{
     .welcomeNote{
         font-size: 1.1rem;
     }
+    .hours{    
+        border: 4.5px solid black;
+    }
 }
 
 /* for mobile */
@@ -235,5 +245,12 @@ body{
         height: 15rem;
         margin: 2rem auto;
 
+    }
+    .hours{    
+        border: 3px solid black;
+    }
+    .dotcenter{
+        top: 45.5%;
+        left: 46.5%;
     }
 }
