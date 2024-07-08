@@ -5,7 +5,7 @@ let minutes = document.querySelector(".minutes");
 let hours = document.querySelector(".hours");
 let start = document.querySelector(".start");
 let reset = document.querySelector(".reset");
-let plusminus = document.querySelectorAll(".plusminus");
+// let plusminus = document.querySelectorAll(".plusminus");
 let running = false;
 let timeoutID;
 // console.log(plus);
@@ -91,7 +91,7 @@ start.addEventListener("click", function (params) {
   } else if (running == true) {
     // on click of "start" timer and flag as running false
     running = false;
-    plusMinusDiv();
+    // plusMinusDiv();
   }
 });
 
