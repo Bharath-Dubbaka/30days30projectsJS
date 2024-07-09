@@ -33,6 +33,15 @@ let swapping = function (params) {
 };
 swapping();
 
+let transit = function (params) {
+  setTimeout(() => {
+    items.forEach((element) => {
+      element.id = "back";
+    });
+  }, 1500);
+};
+transit();
+
 container.addEventListener("click", function (e) {
   console.log(e.target.id);
   let itemInside = e.target;
@@ -40,14 +49,14 @@ container.addEventListener("click", function (e) {
   //   if (itemInside.classList.contains("items")) {
   //     console.log("inside contains items");
 
-  if (itemInside.id == "front") {
-    console.log(itemInside.id, "is front");
-    itemInside.id = "back";
+  if (itemInside.id == "back") {
+    console.log(itemInside.id, "is back");
+    itemInside.id = "front";
     // itemInside.innerHTML = `<i class="fa-brands fa-instagram"></i>`;
-    // setTimeout(() => {
-    //   itemInside.id = "front";
-    //   //   itemInside.innerHTML = "100";
-    // }, 2000);
+    setTimeout(() => {
+      itemInside.id = "back";
+      //   itemInside.innerHTML = "100";
+    }, 2000);
   }
 
   //   else if (itemInside.id == "back") {

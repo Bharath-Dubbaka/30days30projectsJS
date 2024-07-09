@@ -90,7 +90,11 @@ body{
 }
 
 #front{
-    
+    transform: rotateY(360deg);
+transition-duration: 500ms;
+font-size: 3rem;
+background-color: white;
+color: #154751;
 }
 /* itemInside.style.transform = `rotateY(360deg)`;
     itemInside.innerHTML = `<i class="fa-brands fa-instagram"></i>`;
@@ -99,11 +103,7 @@ body{
     itemInside.style.backgroundColor = "white";
     itemInside.style.color = "#154751"; */
 #back{
-transform: rotateY(360deg);
-transition-duration: 500ms;
-font-size: 3rem;
-background-color: white;
-color: #154751;
+
 }
 /* footer */
 .footer {
