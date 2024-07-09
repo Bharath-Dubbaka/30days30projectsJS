@@ -16,7 +16,7 @@
 }
 body{
     min-height: 100vh;
-    background-color: var(--dark-color);
+    background-color: var(--highlight-color);
     /* below display flex is for footer to be at bottom*/
     display: flex;
     flex-direction: column;
@@ -66,42 +66,53 @@ body{
     flex-direction: column;
     /* margin: 2rem auto; */
     margin: auto;
-    /* width: 25rem; */
-}
-.row1{
-    width: 100%;
-}
-.r1, .r2, .r3{
-    width: 25%;
+    min-width: 45rem;
+    background: rgba(255,250,250, 0.6);
+    padding: 1rem;
+    border-radius: 15px;
 }
 
-.rows{
+.topSection{
+    height: 2.5rem;
+    width: 100%;
     display: flex;
+    justify-content: space-evenly;
 }
-.items{
-    background-color: var(--dark-color);
-    margin: 1rem;
-    min-height:6rem;
-    min-width: 6rem;
-    text-align: center;
-    align-content: center;
-    color: var(--light-color);
+.topSection .input{
+    width: 69%;
+}
+.topSection .button{
+    width: 28%;
+}
+input, button{
     border-radius: 5px;
 }
-
-#front{
-    transform: rotateY(360deg);
-    transition-duration: 500ms;
-    font-size: 3rem;
-    background-color: white;
-    color: #154751;
+.dashboard{
+    text-align: center;
+    margin: 1rem 0;
 }
+.details{
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center;
+}
+.icons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
 
-#back{
-    background-color: var(--highlight-color);
-    color: var(--light-color);
-    font-size: 1rem;
-
+}
+.icons .icon{
+    width: 30%;
+    border: 1px solid black;
+    min-height: 5rem;
+    display: flex;
+    align-items: center;
+    /* text-align: center; */
+    justify-content: center;
 }
 /* footer */
 .footer {
