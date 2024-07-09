@@ -91,17 +91,12 @@ body{
 
 #front{
     transform: rotateY(360deg);
-transition-duration: 500ms;
-font-size: 3rem;
-background-color: white;
-color: #154751;
+    transition-duration: 500ms;
+    font-size: 3rem;
+    background-color: white;
+    color: #154751;
 }
-/* itemInside.style.transform = `rotateY(360deg)`;
-    itemInside.innerHTML = `<i class="fa-brands fa-instagram"></i>`;
-    itemInside.style.transitionDuration = "500ms";
-    itemInside.style.fontSize = "2.5rem";
-    itemInside.style.backgroundColor = "white";
-    itemInside.style.color = "#154751"; */
+
 #back{
 
 }

@@ -17,6 +17,7 @@ const container = document.querySelector(".container");
 const items = document.querySelectorAll(".items");
 const board = [];
 
+//to swap items uniquely every time game loads
 let swapping = function (params) {
   for (let i = 0; i < names.length; i++) {
     let swap = Math.floor(Math.random() * names.length);
@@ -28,11 +29,11 @@ let swapping = function (params) {
     items[i].innerHTML = `<i class="fa-brands fa-${names[i]}"></i>`;
     console.log(items[i].innerHTML);
   }
-
   //   console.log(names);
 };
-swapping();
 
+//for initial transition on every load
+// to user able glance at items and then go back to hiding
 let transit = function (params) {
   setTimeout(() => {
     items.forEach((element) => {
@@ -40,37 +41,24 @@ let transit = function (params) {
     });
   }, 1500);
 };
-transit();
 
+// global fn which initiates the whole game
+let globalFn = function (params) {
+  swapping();
+  transit();
+};
+globalFn();
+
+// when Items get clicked
 container.addEventListener("click", function (e) {
   console.log(e.target.id);
   let itemInside = e.target;
-
-  //   if (itemInside.classList.contains("items")) {
-  //     console.log("inside contains items");
-
   if (itemInside.id == "back") {
     console.log(itemInside.id, "is back");
     itemInside.id = "front";
     // itemInside.innerHTML = `<i class="fa-brands fa-instagram"></i>`;
     setTimeout(() => {
       itemInside.id = "back";
-      //   itemInside.innerHTML = "100";
     }, 2000);
   }
-
-  //   else if (itemInside.id == "back") {
-  //     console.log(itemInside.id, "is back");
-  //     itemInside.id = "front";
-  //     itemInside.innerHTML = "100";
-  //   }
-
-  // itemInside.style.color = "red";
-  // itemInside.style.transform = `rotateY(360deg)`;
-  // itemInside.style.transitionDuration = "500ms";
-  // itemInside.style.fontSize = "2.5rem";
-  // itemInside.style.backgroundColor = "white";
-  // itemInside.style.color = "#154751";
-  //   }
-  //   e.preventDefault();
 });
