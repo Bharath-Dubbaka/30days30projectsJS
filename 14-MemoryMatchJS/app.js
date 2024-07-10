@@ -15,50 +15,87 @@ let names = [
 ];
 const container = document.querySelector(".container");
 const items = document.querySelectorAll(".items");
+// const front = document.querySelectorAll(".front");
 const board = [];
+let previousShownCard = undefined;
+// console.log(items)
 
-//to swap items uniquely every time game loads
+//TO swap items uniquely every time game loads
 let swapping = function (params) {
   for (let i = 0; i < names.length; i++) {
     let swap = Math.floor(Math.random() * names.length);
-    // console.log(swap);
     [names[i], names[swap]] = [names[swap], names[i]];
   }
   for (let i = 0; i < names.length; i++) {
-    // console.log(items[0]);
-    items[i].innerHTML = `<i class="fa-brands fa-${names[i]}"></i>`;
-    console.log(items[i].innerHTML);
+    const card = document.createElement("div");
+    card.classList.add("card");
+    card.innerHTML = `
+                    <div class=front>
+                        <i class="fab fa-${names[i]}"></i>
+                    </div>
+                    <div class="back">Click me</div>`;
+    card.addEventListener("click", () => {
+      console.log("Card clickes", card.classList[1]);
+      if (!card.classList.contains("show")) {
+        card.classList.add("show");
+        console.log(card.lastElementChild);
+        card.firstElementChild.style.display = "flex";
+        card.lastElementChild.style.display = "none";
+
+        if (!previousShownCard) {
+          previousShownCard = card.firstElementChild.lastElementChild.className;
+          console.log(previousShownCard);
+        } else {
+          const iconOne = previousShownCard;
+          const iconTwo = card.classList[1];
+          //   console.log(iconTwo, iconTwo);
+          if (iconOne !== iconTwo) {
+            const temp = previousShownCard;
+            setTimeout(() => {
+              temp.classList.remove("show");
+              card.classList.remove("show");
+            }, 1000);
+          }
+          previousShownCard = undefined;
+        }
+      }
+    });
+    items[i].appendChild(card);
   }
-  //   console.log(names);
+  // console.log(names);
 };
 
-//for initial transition on every load
-// to user able glance at items and then go back to hiding
+//FOR initial transition on every load
+// TO user able glance at items and then go back to hiding
 let transit = function (params) {
   setTimeout(() => {
     items.forEach((element) => {
-      element.id = "back";
+      element.firstElementChild.firstElementChild.style.display = "none";
+      element.firstElementChild.lastElementChild.style.display = "flex";
+      element.style.transform = `rotateY(360deg)`;
+
+      element.style.transition = "300ms";
     });
   }, 1500);
 };
 
-// global fn which initiates the whole game
+// GLOBAL FN which initiates the whole game
 let globalFn = function (params) {
   swapping();
   transit();
 };
 globalFn();
 
-// when Items get clicked
-container.addEventListener("click", function (e) {
-  console.log(e.target.id);
-  let itemInside = e.target;
-  if (itemInside.id == "back") {
-    console.log(itemInside.id, "is back");
-    itemInside.id = "front";
-    // itemInside.innerHTML = `<i class="fa-brands fa-instagram"></i>`;
-    setTimeout(() => {
-      itemInside.id = "back";
-    }, 2000);
-  }
-});
+// WHEN Items get clicked
+// container.addEventListener("click", function (e) {
+//   let itemInside = e.target.classList;
+//   console.log(itemInside);
+//   //   if (itemInside.id == "back") {
+//   //     console.log(itemInside.id, "is back");
+//   //     itemInside.id = "front";
+//   //     // itemInside.innerHTML = `<i class="fa-brands fa-instagram"></i>`;
+//   //     setTimeout(() => {
+//   //       itemInside.id = "back";
+//   //     }, 2000);
+//   //   }
+// });
