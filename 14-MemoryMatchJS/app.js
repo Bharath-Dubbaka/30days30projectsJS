@@ -31,10 +31,11 @@ let swapping = function (params) {
     card.classList.add("card");
     card.innerHTML = `
                     <div class="front">
-                    <i class="fa-brands fa-${names[i]}"></i>
-                    
+                        <i class="fa-brands fa-${names[i]}"></i>
                     </div>
-                    <div class="back">Click me</div>`;
+                    <div class="back">
+                        <i class="fa-solid fa-rotate"></i>
+                    </div>`;
     card.addEventListener("click", () => {
       //   console.log("Card clickes", card.classList[1]);
       if (!card.classList.contains("show")) {
@@ -47,21 +48,17 @@ let swapping = function (params) {
         card.lastElementChild.style.display = "none";
         if (!previousShownCard) {
           previousShownCard = card;
-          //     // card.firstElementChild.firstElementChild.classList.value;
           //   console.log(previousShownCard, "previouscard");
-          //   card.querySelector("i").classList[1];
           //   console.log(card.querySelector("i").classList[1]);
         } else {
+          // WE ARE TARGETING SVGs present INSIDE CARD ELEMENT
+          // BCZ FONT AWESOME AUTOMATICALLY CHANGES ICONS INTO SVGs
           const iconOne = previousShownCard.querySelector("svg").classList[1];
           const iconTwo = card.querySelector("svg").classList[1];
-          // card.firstElementChild.firstElementChild.classList.value;
           console.log(iconOne, iconTwo, "icon one and two");
-
           if (iconOne !== iconTwo) {
             const temp = previousShownCard;
             setTimeout(() => {
-              console.log(temp.parentElement, "TEMP");
-              console.log(card, "CARD");
               temp.classList.remove("show");
               card.classList.remove("show");
               card.firstElementChild.style.display = "none";
