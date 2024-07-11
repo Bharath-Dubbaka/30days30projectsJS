@@ -30,30 +30,44 @@ let swapping = function (params) {
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
-                    <div class=front>
-                        <i class="fab fa-${names[i]}"></i>
+                    <div class="front">
+                    <i class="fa-brands fa-${names[i]}"></i>
+                    
                     </div>
                     <div class="back">Click me</div>`;
     card.addEventListener("click", () => {
-      console.log("Card clickes", card.classList[1]);
+      //   console.log("Card clickes", card.classList[1]);
       if (!card.classList.contains("show")) {
         card.classList.add("show");
-        console.log(card.lastElementChild);
+        // console.log(
+        //   card.firstElementChild.firstElementChild.classList,
+        //   "CLASS LIST"
+        // );
         card.firstElementChild.style.display = "flex";
         card.lastElementChild.style.display = "none";
-
         if (!previousShownCard) {
-          previousShownCard = card.firstElementChild.lastElementChild.className;
-          console.log(previousShownCard);
+          previousShownCard = card;
+          //     // card.firstElementChild.firstElementChild.classList.value;
+          //   console.log(previousShownCard, "previouscard");
+          //   card.querySelector("i").classList[1];
+          //   console.log(card.querySelector("i").classList[1]);
         } else {
-          const iconOne = previousShownCard;
-          const iconTwo = card.classList[1];
-          //   console.log(iconTwo, iconTwo);
+          const iconOne = previousShownCard.querySelector("svg").classList[1];
+          const iconTwo = card.querySelector("svg").classList[1];
+          // card.firstElementChild.firstElementChild.classList.value;
+          console.log(iconOne, iconTwo, "icon one and two");
+
           if (iconOne !== iconTwo) {
             const temp = previousShownCard;
             setTimeout(() => {
+              console.log(temp.parentElement, "TEMP");
+              console.log(card, "CARD");
               temp.classList.remove("show");
               card.classList.remove("show");
+              card.firstElementChild.style.display = "none";
+              card.lastElementChild.style.display = "flex";
+              temp.firstElementChild.style.display = "none";
+              temp.lastElementChild.style.display = "flex";
             }, 1000);
           }
           previousShownCard = undefined;
