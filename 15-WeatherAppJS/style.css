@@ -65,7 +65,7 @@ body {
    flex-direction: column;
    /* margin: 2rem auto; */
    margin: auto;
-   min-width: 45rem;
+   width: 45rem;
    background: rgba(255, 250, 250, 0.6);
    padding: 1rem;
    border-radius: 15px;
@@ -87,6 +87,7 @@ input,
 button {
    border-radius: 5px;
    font-size: 1.5rem;
+   border: 2px solid black;
 }
 input {
    padding-left: 1rem;
@@ -116,7 +117,7 @@ button {
 }
 .icons .icon {
    width: 30%;
-   border: 1px solid black;
+   border: 3px solid black;
    min-height: 5rem;
    display: flex;
    align-items: center;
@@ -159,9 +160,6 @@ footer a:hover {
    .welcomeNote {
       font-size: 1.1rem;
    }
-   .hours {
-      border: 4.5px solid black;
-   }
 }
 
 /* for mobile */
@@ -180,12 +178,13 @@ footer a:hover {
    .container {
       /* width: 15rem; */
       /* height: 15rem; */
+      width: 90%;
       margin: 2rem auto;
    }
-   .items {
-      background-color: var(--dark-color);
-      margin: 0.5rem;
-      min-height: 3rem;
-      min-width: 3rem;
+   button,
+   input,
+   .details,
+   .icon {
+      font-size: 1rem;
    }
 }
