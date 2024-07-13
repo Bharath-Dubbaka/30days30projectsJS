@@ -87,7 +87,14 @@ input,
 button {
    border-radius: 5px;
    font-size: 1.5rem;
-
+}
+input {
+   padding-left: 1rem;
+   color: var(--secodary-highlight-color);
+}
+button {
+   background-color: var(--secodary-highlight-color);
+   color: var(--highlight-color);
 }
 .dashboard {
    text-align: center;
@@ -98,7 +105,6 @@ button {
    font-size: 1.4rem;
    display: flex;
    justify-content: center;
-   /* text-align: center; */
    align-items: center;
 }
 .icons {
@@ -107,7 +113,6 @@ button {
    justify-content: space-between;
    margin-top: 1rem;
    font-size: 1.5rem;
-
 }
 .icons .icon {
    width: 30%;
@@ -115,7 +120,6 @@ button {
    min-height: 5rem;
    display: flex;
    align-items: center;
-   /* text-align: center; */
    justify-content: center;
 }
 /* footer */

@@ -56,7 +56,6 @@ let dataCall = function (data) {
          <div class="name">${name},${data.sys.country}</div>
          <div class="temp">${temp}'C</div>
          <div class="description">${description}, ${data.weather[0].description}</div>
-         <div class="description">${data.weather[0].icon}</div>
          <div class="tempMaxMin">${tempMax}'C (Max) ${tempMin}'C (Min) </div>
          <div class="temp"></div>
       </div>`;
