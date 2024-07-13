@@ -1,10 +1,4 @@
 const APIkey = "808f181ea900d920ac10cc09fab3ddeb";
-
-const limit = 5;
-let lat = "17.4065";
-let lon = "78.4772";
-// const link = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=${limit}&appid=${APIkey}`;
-const urlBase = `https://api.openweathermap.org/data/2.5/weather?q=goa&appid=${APIkey}`;
 const urlBase2 = `https://api.openweathermap.org/data/2.5/weather`;
 
 // let input = document.querySelector("#input");
@@ -24,32 +18,15 @@ let apiCall = async function (params) {
    const data = await response.json();
    console.log(data, "data");
    dataCall(data);
-   //  fetch(urlBase2)
-   //     .then((response) => {
-   //        response.json();
-   //     })
-   //     .then((data) => {
-   //        let newdata = data;
-   //        dataCall(newdata);
-   //     })
-   //     .catch((err) => {
-   //        console.log(err);
-   //     });
 };
-
-// Hyderabad,IN
-// 13 July (Saturday), 2024
-// 29°C, // 29°C (min) / 30°C (max)
-// Haze
-// WIND< HUMIDITY
 
 let dataCall = function (data) {
    let description = data.weather[0].main;
    let name = data.name;
    let temp = Math.round(data.main.temp);
-   let date = new Date().toLocaleString("en-US", {
-      timeZone: "America/New_York",
-   });
+   //  let date = new Date().toLocaleString("en-US", {
+   //     timeZone: "America/New_York",
+   //  });
    let tempMax = Math.ceil(data.main.temp_max);
    let tempMin = Math.floor(data.main.temp_min);
    let box = ` <div class="inner">
