@@ -3,7 +3,7 @@
 *::before {
    padding: 0;
    margin: 0;
-   font-family: "Comfortaa", cursive;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
    box-sizing: border-box;
 }
 /* boilerplate CSS with header and basic start styles */
@@ -41,7 +41,7 @@ body {
    /* justify-content: end; */
    margin: 1rem;
    width: 60%;
-   /* font-family: 'Comfortaa', cursive; */
+   font-family: 'Comfortaa', cursive;
    font-size: 1.5rem;
    font-weight: 800;
 }
@@ -54,7 +54,7 @@ body {
    margin: 1rem;
    /* padding:0.5rem; */
    width: 40%;
-   /* font-family: 'Comfortaa', cursive; */
+   font-family: 'Comfortaa', cursive;
    font-size: 1.3rem;
    font-weight: 800;
    text-align: end;
@@ -77,10 +77,10 @@ body {
    display: flex;
    justify-content: space-evenly;
 }
-.topSection .input {
+.topSection #input {
    width: 69%;
 }
-.topSection .button {
+.topSection #button {
    width: 28%;
 }
 input,
