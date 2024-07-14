@@ -30,11 +30,10 @@ let dataCall = function (data) {
    let tempMax = Math.ceil(data.main.temp_max);
    let tempMin = Math.floor(data.main.temp_min);
    let box = ` <div class="inner">
-         <div class="name">${name},${data.sys.country}</div>
-         <div class="temp">${temp}'C</div>
-         <div class="description">${description}, ${data.weather[0].description}</div>
-         <div class="tempMaxMin">${tempMax}'C (Max) ${tempMin}'C (Min) </div>
-         <div class="temp"></div>
+         <div class="name  items">${name},${data.sys.country}</div>
+         <div class="temp items">${temp}'C</div>
+         <div class="description items">${description}, ${data.weather[0].description}</div>
+         <div class="tempMaxMin items">${tempMax}'C (Max), ${tempMin}'C (Min) </div>
       </div>`;
    // details.appendChild(box);
    details.innerHTML = box;

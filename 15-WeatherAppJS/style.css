@@ -65,7 +65,7 @@ body {
    flex-direction: column;
    /* margin: 2rem auto; */
    margin: auto;
-   width: 45rem;
+   width: 42rem;
    background: rgba(255, 250, 250, 0.6);
    padding: 1rem;
    border-radius: 15px;
@@ -108,6 +108,13 @@ button {
    justify-content: center;
    align-items: center;
 }
+.temp {
+   font-size: larger;
+   font-weight: 900;
+}
+.items {
+   margin: 10px auto;
+}
 .icons {
    width: 100%;
    display: flex;
@@ -122,6 +129,7 @@ button {
    display: flex;
    align-items: center;
    justify-content: center;
+   font-weight: 900;
 }
 /* footer */
 .footer {
@@ -185,6 +193,6 @@ footer a:hover {
    input,
    .details,
    .icon {
-      font-size: 1rem;
+      font-size: 0.86rem;
    }
 }
