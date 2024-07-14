@@ -16,6 +16,28 @@
    --secodary-highlight-color: #252339;
    --exp: "#252339";
 }
+/* BOILERPLATE CUSTOM SCROLL BAR CODE */
+/* width */
+::-webkit-scrollbar {
+   width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+   /* box-shadow: inset 0 0 5px grey; */
+   background: #f1f1f1;
+   border-radius: 15px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: #888;
+   border-radius: 10px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}
+
+/* BODY */
 body {
    min-height: 100vh;
    background-color: var(--highlight-color);
@@ -62,74 +84,44 @@ body {
 }
 .container {
    display: flex;
-   flex-direction: column;
+   /* flex-direction: column; */
    /* margin: 2rem auto; */
    margin: auto;
-   width: 42rem;
+   flex-wrap: wrap;
+   width: fit-content;
+   max-width: 85%;
+
+   height: 90%;
    background: rgba(255, 250, 250, 0.6);
    padding: 1rem;
    border-radius: 15px;
-}
-
-.topSection {
-   height: 2.5rem;
-   width: 100%;
-   display: flex;
    justify-content: space-evenly;
 }
-.topSection #input {
-   width: 69%;
-}
-.topSection #button {
-   width: 28%;
-}
-input,
-button {
-   border-radius: 5px;
-   font-size: 1.5rem;
-   border: 2px solid black;
-}
-input {
-   padding-left: 1rem;
-   color: var(--secodary-highlight-color);
-}
-button {
-   background-color: var(--secodary-highlight-color);
-   color: var(--highlight-color);
-}
-.dashboard {
-   text-align: center;
-   margin: 1rem 0;
-}
-.details {
-   min-height: 5rem;
-   font-size: 1.4rem;
+.addNote {
+   width: 10rem;
+   height: 10rem;
+   background-color: var(--light-color);
+   margin: 0.5rem;
+   padding: 0.5rem;
+   border-radius: 15px;
    display: flex;
    justify-content: center;
    align-items: center;
-}
-.temp {
-   font-size: larger;
-   font-weight: 900;
 }
 .items {
-   margin: 10px auto;
-}
-.icons {
-   width: 100%;
-   display: flex;
-   justify-content: space-between;
-   margin-top: 1rem;
-   font-size: 1.5rem;
-}
-.icons .icon {
-   width: 30%;
-   border: 3px solid black;
-   min-height: 5rem;
-   display: flex;
-   align-items: center;
+   width: 10rem;
+   height: 10rem;
+   background-color: var(--light-color);
+   margin: 0.5rem;
+   padding: 0.5rem;
+   /* box-sizing: content-box; */
+   overflow-x: hidden;
+   overflow-y: auto;
+   border-radius: 15px;
+   /* display: flex;
    justify-content: center;
-   font-weight: 900;
+   align-items: center; */
+   /* text-align: center; */
 }
 /* footer */
 .footer {
@@ -174,12 +166,6 @@ footer a:hover {
       width: 90%;
       margin: 2rem auto;
    }
-   button,
-   input,
-   .details,
-   .icon {
-      font-size: 0.86rem;
-   }
 }
 
 /* for mobile */
@@ -201,10 +187,12 @@ footer a:hover {
       width: 90%;
       margin: 2rem auto;
    }
-   button,
-   input,
-   .details,
-   .icon {
-      font-size: 0.86rem;
+   /* .addNote {
+      width: 30%;
+      height: 8rem;
    }
+   .items {
+      width: 30%;
+      height: 8rem;
+   } */
 }
