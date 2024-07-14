@@ -84,7 +84,6 @@ body {
 }
 .container {
    display: flex;
-   /* flex-direction: column; */
    /* margin: 2rem auto; */
    margin: auto;
    flex-wrap: wrap;
@@ -107,6 +106,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
+   /* order: 1; */
 }
 .items {
    width: 10rem;
