@@ -9,6 +9,12 @@ addNote.addEventListener("click", function name(params) {
    //    Adding date as a opening text in the note
    item.innerHTML = formattedDateFn();
    container.appendChild(item);
+
+   item.style.backgroundColor = "#e3fbd8";
+   setTimeout(() => {
+      item.style.transitionDuration = "1000ms";
+      item.style.backgroundColor = "ghostwhite";
+   }, 1000);
 });
 
 let formattedDateFn = function (params) {
@@ -23,15 +29,7 @@ let formattedDateFn = function (params) {
    //    const seconds = String(currentDate.getSeconds()).padStart(2, "0");
 
    // To get the day Name of the week
-   const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-   ];
+   const days = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
    //    For Month Number to Name
    const months = [
       "Jan",

@@ -85,33 +85,35 @@ body {
 .container {
    display: flex;
    /* margin: 2rem auto; */
-   margin: auto;
+   margin: 2rem auto;
    flex-wrap: wrap;
    width: fit-content;
    max-width: 85%;
-
-   height: 90%;
+   max-height: 90%;
    background: rgba(255, 250, 250, 0.6);
    padding: 1rem;
    border-radius: 15px;
-   justify-content: space-evenly;
+   justify-content: space-around;
 }
 .addNote {
-   width: 10rem;
-   height: 10rem;
-   background-color: var(--light-color);
+   width: 12rem;
+   height: 12rem;
+   background-color: var(--highlight-color);
+   color: var(--light-color);
    margin: 0.5rem;
    padding: 0.5rem;
    border-radius: 15px;
    display: flex;
    justify-content: center;
    align-items: center;
+   font-size: 4rem;
    /* order: 1; */
 }
 .items {
-   width: 10rem;
-   height: 10rem;
+   width: 12rem;
+   height: 12rem;
    background-color: var(--light-color);
+   /* color: #e3fbd8; */
    margin: 0.5rem;
    padding: 0.5rem;
    /* box-sizing: content-box; */
