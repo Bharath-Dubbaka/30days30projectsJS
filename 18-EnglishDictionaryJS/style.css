@@ -1,0 +1,172 @@
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+}
+/* boilerplate CSS with header and basic start styles */
+:root {
+   --lightest-color: ghostwhite;
+   --light-color: #ffffff;
+   --highlight-color: darkorange;
+   --secondary-highlight-color: #1c658c;
+   --dark-color: #154751;
+   --darkest-color: black;
+}
+/* BODY */
+body {
+   min-height: 100vh;
+   background-color: var(--secondary-highlight-color);
+   /* below display flex is for footer to be at bottom*/
+   display: flex;
+   flex-direction: column;
+}
+/* header */
+.header {
+   background-color: var(--light-color);
+   color: var(--darkest-color);
+   /* margin-bottom: 1.5rem; */
+}
+.titles {
+   display: flex;
+   width: 100%;
+   /* padding: 0.5rem; */
+   line-height: 1;
+}
+.title {
+   font-size: 1.5rem;
+   display: flex;
+   /* justify-content: end; */
+   margin: 1rem;
+   width: 60%;
+   font-family: "Comfortaa", cursive;
+   font-size: 1.5rem;
+   font-weight: 800;
+}
+.subtitle {
+   font-size: 0.99rem;
+   display: flex;
+   /* text-align: center; */
+   justify-content: end;
+   align-items: center;
+   margin: 1rem;
+   /* padding:0.5rem; */
+   width: 40%;
+   font-family: "Comfortaa", cursive;
+   font-size: 1.3rem;
+   font-weight: 800;
+   text-align: end;
+   align-items: end;
+}
+.container {
+   display: flex;
+   /* margin: 2rem auto; */
+   flex-direction: column;
+   text-align: center;
+   margin: 2rem auto;
+   flex-wrap: wrap;
+   /* width: fit-content; */
+   min-width: 350px;
+   max-height: 90%;
+   background-color: var(--lightest-color);
+   padding: 1rem;
+   border-radius: 15px;
+   justify-content: space-around;
+}
+.topNote {
+   margin: 1rem 0 2rem 0;
+   font-size: 1.5rem;
+   font-weight: bolder;
+}
+.block {
+   width: 100%;
+}
+input {
+   width: 70%;
+   height: 2.5rem;
+   /* margin: 1rem auto; */
+   border: 1px solid grey;
+   border-radius: 10px;
+}
+button {
+   width: 28%;
+   height: 2.5rem;
+   background-color: var(--secondary-highlight-color);
+   color: var(--light-color);
+   border-radius: 10px;
+}
+/* footer */
+.footer {
+   padding: 10px;
+   padding: 0.6rem;
+   background-color: var(--darkest-color);
+   font-size: 0.75em;
+   text-align: center;
+   width: 100%;
+   margin-top: auto;
+}
+
+footer a {
+   padding-bottom: 1px;
+   border: 0;
+   color: var(--lightest-color);
+   text-decoration: none;
+   font-weight: 600;
+   font-style: italic;
+}
+
+footer a:active,
+footer a:focus,
+footer a:hover {
+   color: var(--highlight-color);
+   text-decoration: underline;
+}
+
+/* MEdia queries  */
+/* for Tablet */
+@media (max-width: 775px) {
+   .heading {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+   }
+   .welcomeNote {
+      font-size: 1.1rem;
+   }
+   .container {
+      /* width: 15rem; */
+      /* height: 15rem; */
+      width: 90%;
+      margin: 2rem auto;
+   }
+}
+
+/* for mobile */
+@media (max-width: 475px) {
+   .titles {
+      padding: 0.3rem;
+   }
+   .title {
+      font-size: 1.3em;
+      width: 100%;
+      justify-content: center;
+   }
+   .subtitle {
+      display: none;
+   }
+   .container {
+      /* width: 15rem; */
+      /* height: 15rem; */
+      width: 90%;
+      margin: 2rem auto;
+   }
+   /* .addNote {
+       width: 30%;
+       height: 8rem;
+    }
+    .items {
+       width: 30%;
+       height: 8rem;
+    } */
+}
