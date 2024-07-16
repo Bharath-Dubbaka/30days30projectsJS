@@ -25,19 +25,16 @@
          <div class="topNote">Text-to-Speech</div>
          <div class="blockOne">
             <div class="sideNote">Enter Text</div>
-            <div class="text" contenteditable="true"></div>
+            <div class="textHold">
+               <div class="text" contenteditable="true"></div>
+            </div>
          </div>
          <div class="blockTwo">
             <div class="sideNote">Select Voice</div>
-            <select name="voice" id="voiceId">
-               <option value="One">One</option>
-               <option value="Two">Two</option>
-               <option value="One">One</option>
-               <option value="One">One</option>
-            </select>
+            <select name="voice" id="voiceSelector"></select>
          </div>
          <div class="blockThree">
-            <button>Convert</button>
+            <button class="btn">Convert</button>
          </div>
       </div>
       <footer class="footer">
