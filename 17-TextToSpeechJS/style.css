@@ -120,11 +120,10 @@ body {
    /* overflow-x: hidden; */
    overflow-y: scroll;
    line-break: anywhere;
-
 }
 .blockTwo {
    text-align: start;
-   margin: 1.5rem;
+   margin: 0.5rem 1.5rem;
 }
 #voiceSelect {
    width: 100%;
@@ -133,7 +132,7 @@ body {
 }
 .blockThree {
    text-align: start;
-   margin: 1.5rem;
+   margin: 0.5rem 1.5rem;
 }
 .blockFour {
    text-align: start;

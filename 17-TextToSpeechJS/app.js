@@ -41,33 +41,38 @@ let voiceRender = function (params) {
 // converting text to speech with selected voice
 const convertToSpeech = function (event) {
    event.preventDefault();
-   const utterThis = new SpeechSynthesisUtterance(textInputClass.innerText);
-   const selectedOption =
-      voiceSelect.selectedOptions[0].getAttribute("data-name");
-   for (let i = 0; i < voices.length; i++) {
-      if (voices[i].name === selectedOption) {
-         utterThis.voice = voices[i];
+   if (textInputClass.innerText.length <= 0) {
+      alert("please enter some text...");
+   } else {
+      const utterThis = new SpeechSynthesisUtterance(textInputClass.innerText);
+      const selectedOption =
+         voiceSelect.selectedOptions[0].getAttribute("data-name");
+      for (let i = 0; i < voices.length; i++) {
+         if (voices[i].name === selectedOption) {
+            utterThis.voice = voices[i];
+         }
       }
-   }
-   //    utterThis.pitch = pitch.value;
-   //    utterThis.rate = rate.value;
-   utterThis.onend = function (event) {
-      //   alert("Finished in " + event.elapsedTime + " seconds.");
-      pause.style.display = "none";
-      btn.style.display = "flex";
-      synth.cancel();
-   };
-   synth.speak(utterThis);
+      //    utterThis.pitch = pitch.value;
+      //    utterThis.rate = rate.value;
 
-   speaking = true;
-   //    textInputClass.blur();
+      //    To reset to normal after speech is completed
+      utterThis.onend = function (event) {
+         //   alert("Finished in " + event.elapsedTime + " seconds.");
+         pause.style.display = "none";
+         btn.style.display = "flex";
+         synth.cancel();
+      };
+      synth.speak(utterThis);
+      speaking = true;
+      //    textInputClass.blur();
+   }
 };
 // EventListener
 btn.addEventListener("click", convertToSpeech);
 
-reset.addEventListener("click", function (params) {
-   synth.cancel();
-});
+// reset.addEventListener("click", function (params) {
+//    synth.cancel();
+// });
 pause.addEventListener("click", function (params) {
    console.log("clicked");
    if (speaking == true) {
