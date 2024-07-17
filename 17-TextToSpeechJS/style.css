@@ -118,8 +118,9 @@ body {
    height: 12rem;
    resize: none;
    /* overflow-x: hidden; */
-   overflow: scroll;
+   overflow-y: scroll;
    line-break: anywhere;
+
 }
 .blockTwo {
    text-align: start;
@@ -134,12 +135,24 @@ body {
    text-align: start;
    margin: 1.5rem;
 }
+.blockFour {
+   text-align: start;
+   margin: 0.5rem 1.5rem;
+}
+.pause {
+   display: none;
+   background-color: var(--secondary-highlight-color);
+   color: var(--darkest-color);
+}
 button {
    width: 100%;
    height: 3rem;
    background-color: var(--darkest-color);
    color: var(--light-color);
    border-radius: 10px;
+   text-align: center;
+   justify-content: center;
+   align-items: center;
 }
 /* footer */
 .footer {
