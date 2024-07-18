@@ -1,8 +1,10 @@
 const context = document.querySelector("#context");
 const timer = document.querySelector(".timer");
-const mistakesDiv = document.querySelector(".mistakes");
+const mistakesDiv = document.querySelector(".mistakesDiv");
 const reset = document.querySelector(".reset");
 const text = document.querySelector(".text");
+const wpmDiv = document.querySelector(".wpmDiv");
+const cpmDiv = document.querySelector(".cpmDiv");
 
 const paras = [
    "Authors often misinterpret the lettuce as a folklore rabbi, when in actuality it feels more like an uncursed bacon. Pursued distances show us how mother-in-laws can be charleses. Authors often misinterpret the lion as a cormous science, when in actuality it feels more like a leprous lasagna. Recent controversy aside, their band was, in this moment, a racemed suit. The clutch of a joke becomes a togaed chair. The first pickled chess is.",
@@ -27,10 +29,11 @@ const paras = [
    "Those cowbells are nothing more than elements. This could be, or perhaps before stockings, thoughts were only opinions. A coil of the exclamation is assumed to be a hurtless toy. A board is the cast of a religion. In ancient times the first stinko sailboat is, in its own way, an exchange. Few can name a tutti channel that isn't a footless operation. Extending this logic, an oatmeal is the rooster of a shake. Those step-sons are nothing more than matches.",
 ];
 
-let maxTime = 99;
+let maxTime = 9;
 let running = false;
 let characterTyped = 0;
 let mistakes = 0;
+let wpm = 0;
 // let timeRunFN = function (params) {
 setInterval(() => {
    if (maxTime > 0 && running) {
@@ -39,6 +42,8 @@ setInterval(() => {
       timer.innerHTML = `Time Left: ${maxTime}`;
       reset.disabled = true;
       context.disabled = false;
+      mistakesDiv.innerHTML = `Mistakes: ${mistakes}`;
+      wpmDiv.innerHTML = `WPM: ${wpm}`;
    }
    if (maxTime <= 0) {
       running = false;
@@ -60,11 +65,9 @@ const updateQuote = function (params) {
    let randPara = Math.floor(Math.random() * paras.length);
    document.addEventListener("keydown", keydownAction);
    let letters = paras[randPara].split("");
-   //    console.log(letters, "letters");
    text.innerHTML = "";
    context.value = "";
    letters.forEach((letter) => {
-      //   console.log(letter, "letteR");
       let spans = document.createElement("span");
       spans.innerHTML = letter;
       text.appendChild(spans);
@@ -72,49 +75,15 @@ const updateQuote = function (params) {
 };
 updateQuote();
 
-// const startTyping = function (params) {
-//    let characters = text.querySelectorAll("span");
-//    let typedChars = context.value.split("");
-//    characterTyped++;
-//    mistakes = 0;
-//    console.log(typedChars, "typedChars");
-//    characters.forEach((char, index) => {
-//       console.log(char, index, "char and Indez");
-//       // if charactor is not types like nor right nor wrong
-//       if (typedChars[index] == undefined || typedChars[index] == null) {
-//          console.log("nothing yet");
-//          //  char[index].style.color = "pink";
-
-//          //  char[index].className = "noDesign";
-//          //  char[index].className = "incorrect";
-//       } else if (char[index] == typedChars[index]) {
-//          console.log("COrrect");
-//          char[index].style.color = "green";
-
-//          // if char typed is CORRECT
-//          //  char[index].className = "correct";
-//          //  char[index].className.remove("incorrect");
-//       } else {
-//          // if char typed is not INCORRECT
-//          console.log("Incorrect");
-//          char[index].style.color = "red";
-
-//          //  char[index].className = "incorrect";
-//          //  char[index].className.remove("correct");
-//          mistakes++;
-//          //  console.log(mistakes, "mistakes");
-//       }
-//    });
-// };
-
 context.addEventListener("input", function (params) {
    let characters = text.querySelectorAll("span");
    let typedChars = context.value.split("");
-   characters.forEach((elem) => elem.classList.remove("activeChar"));
-   characters[typedChars.length].classList.add("activeChar");
+   wpm = context.value.split(" ").length;
+   //    characters.forEach((elem) => elem.classList.remove("activeChar"));
+   //    characters[typedChars.length].classList.add("activeChar");
    characterTyped++;
-   //    mistakes = 0;
-   console.log(typedChars.length, "typedChars");
+   mistakes = 0;
+   //    console.log(typedChars.length, "typedChars");
    characters.forEach((char, index) => {
       // if charactor is not types like nor right nor wrong
       if (typedChars[index] == null) {
@@ -125,17 +94,18 @@ context.addEventListener("input", function (params) {
          char.classList.add("correct");
          char.classList.remove("incorrect");
       } else {
-         console.log("Incorrect");
+         // if char typed is CORRECT
          char.classList.add("incorrect");
          char.classList.remove("correct");
          mistakes++;
-         //  console.log(mistakes, "mistakes");
       }
    });
 });
 
 reset.addEventListener("click", function (params) {
    maxTime = 9;
-   //    console.log(context.value, "context");
    updateQuote();
+
+   reset.blur();
+   context.focus();
 });
