@@ -1,6 +1,6 @@
 const context = document.querySelector("#context");
 const timer = document.querySelector(".timer");
-const mistakes = document.querySelector(".mistakes");
+const mistakesDiv = document.querySelector(".mistakes");
 const reset = document.querySelector(".reset");
 const text = document.querySelector(".text");
 
@@ -28,26 +28,114 @@ const paras = [
 ];
 
 let maxTime = 99;
-
+let running = false;
+let characterTyped = 0;
+let mistakes = 0;
+// let timeRunFN = function (params) {
 setInterval(() => {
-   if (maxTime > 0) {
+   if (maxTime > 0 && running) {
       maxTime--;
-      console.log(maxTime);
+      //   console.log(maxTime);
       timer.innerHTML = `Time Left: ${maxTime}`;
+      reset.disabled = true;
+      context.disabled = false;
+   }
+   if (maxTime <= 0) {
+      running = false;
+      maxTime = 9;
+      context.blur();
+      reset.disabled = false;
+      context.disabled = true;
+      document.removeEventListener("keydown", keydownAction);
    }
 }, 1000);
+// };
+let keydownAction = function (params) {
+   context.focus();
+   running = true;
+   //   timeRunFN();
+};
 
-const textLoad = function (params) {
+const updateQuote = function (params) {
    let randPara = Math.floor(Math.random() * paras.length);
-   console.log();
-   document.addEventListener("keydown", () => context.focus());
+   document.addEventListener("keydown", keydownAction);
    let letters = paras[randPara].split("");
-   console.log(letters, "letters");
+   //    console.log(letters, "letters");
+   text.innerHTML = "";
+   context.value = "";
    letters.forEach((letter) => {
-      console.log(letter, "letteR");
+      //   console.log(letter, "letteR");
       let spans = document.createElement("span");
       spans.innerHTML = letter;
       text.appendChild(spans);
    });
 };
-textLoad();
+updateQuote();
+
+// const startTyping = function (params) {
+//    let characters = text.querySelectorAll("span");
+//    let typedChars = context.value.split("");
+//    characterTyped++;
+//    mistakes = 0;
+//    console.log(typedChars, "typedChars");
+//    characters.forEach((char, index) => {
+//       console.log(char, index, "char and Indez");
+//       // if charactor is not types like nor right nor wrong
+//       if (typedChars[index] == undefined || typedChars[index] == null) {
+//          console.log("nothing yet");
+//          //  char[index].style.color = "pink";
+
+//          //  char[index].className = "noDesign";
+//          //  char[index].className = "incorrect";
+//       } else if (char[index] == typedChars[index]) {
+//          console.log("COrrect");
+//          char[index].style.color = "green";
+
+//          // if char typed is CORRECT
+//          //  char[index].className = "correct";
+//          //  char[index].className.remove("incorrect");
+//       } else {
+//          // if char typed is not INCORRECT
+//          console.log("Incorrect");
+//          char[index].style.color = "red";
+
+//          //  char[index].className = "incorrect";
+//          //  char[index].className.remove("correct");
+//          mistakes++;
+//          //  console.log(mistakes, "mistakes");
+//       }
+//    });
+// };
+
+context.addEventListener("input", function (params) {
+   let characters = text.querySelectorAll("span");
+   let typedChars = context.value.split("");
+   characters.forEach((elem) => elem.classList.remove("activeChar"));
+   characters[typedChars.length].classList.add("activeChar");
+   characterTyped++;
+   //    mistakes = 0;
+   console.log(typedChars.length, "typedChars");
+   characters.forEach((char, index) => {
+      // if charactor is not types like nor right nor wrong
+      if (typedChars[index] == null) {
+         char.classList.remove("incorrect");
+         char.classList.remove("correct");
+      } else if (char.innerHTML == typedChars[index]) {
+         // if char typed is CORRECT
+         char.classList.add("correct");
+         char.classList.remove("incorrect");
+      } else {
+         console.log("Incorrect");
+         char.classList.add("incorrect");
+         char.classList.remove("correct");
+         mistakes++;
+         //  console.log(mistakes, "mistakes");
+      }
+   });
+});
+
+reset.addEventListener("click", function (params) {
+   maxTime = 9;
+   //    console.log(context.value, "context");
+   updateQuote();
+});
