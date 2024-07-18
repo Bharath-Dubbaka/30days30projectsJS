@@ -87,8 +87,14 @@ input {
    width: 70%;
    height: 2.5rem;
    /* margin: 1rem auto; */
-   border: 1px solid grey;
+   border: 1px solid lightgray;
+
    border-radius: 10px;
+   padding-left: 5px;
+   font-size: 1.1rem;
+}
+input:focus {
+   border: 1px solid lightgrey;
 }
 button {
    width: 28%;
@@ -96,6 +102,40 @@ button {
    background-color: var(--secondary-highlight-color);
    color: var(--light-color);
    border-radius: 10px;
+   font-size: 1.1rem;
+}
+#def {
+   /* color: pink; */
+   font-weight: 600;
+}
+#meaning {
+   /* color: green; */
+   font-weight: 600;
+}
+#example {
+   color: grey;
+   font-size: 1.1rem;
+   font-weight: 800;
+}
+#synonyms {
+   /* color: red; */
+   font-weight: 600;
+}
+.sideNote,
+#meaning,
+#example,
+#def,
+#synonyms {
+   margin: 1rem;
+   padding: 0.5rem;
+   border: 0.5px solid lightgray;
+   border-radius: 10px;
+}
+
+.results {
+   border: 1px solid lightgrey;
+   border-radius: 10px;
+   margin: 1rem 10px;
 }
 /* footer */
 .footer {

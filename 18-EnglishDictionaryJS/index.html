@@ -24,32 +24,19 @@
       <div class="container">
          <div class="topNote">EnglishDictionary</div>
          <div class="block">
-            <input class="inputEng" type="text" />
+            <input
+               class="inputEng"
+               type="text"
+               placeholder="Ex: High school, Ice Cream, Karate"
+            />
             <button class="convertBtn">Convert</button>
-            <!-- <div>EG: High school, Ice Cream, Karate</div> -->
+            <!-- <div class="sideNote">Example: High school, Ice Cream, Karate</div> -->
          </div>
-         <div class="results"></div>
-         <div class="content">
-            <li class="meaning">
-               <div class="details">
-                  <p>Meaning</p>
-                  <span>___</span>
-               </div>
-            </li>
-            <div class="example">
-               <li class="meaning">
-                  <div class="details">
-                     <p>Example</p>
-                     <span>___</span>
-                  </div>
-               </li>
-               <div class="synonyms">
-                  <div class="details">
-                     <p>Synonyms</p>
-                     <div class="list"></div>
-                  </div>
-               </div>
-            </div>
+         <div class="results">
+            <p id="example"></p>
+            <p id="def"></p>
+            <p id="meaning"></p>
+            <p id="synonyms"></p>
          </div>
       </div>
       <footer class="footer">
