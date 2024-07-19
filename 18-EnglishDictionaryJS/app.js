@@ -37,7 +37,7 @@ let APIfn = function (data) {
    document.querySelector(
       "#example"
    ).innerHTML = `${data[0].word}, ${data[0].phonetic}`;
-   document.querySelector("#def").innerHTML = `DEF: ${defs}`;
+   document.querySelector("#def").innerHTML = `${defs}`;
 
-   document.querySelector("#meaning").innerHTML = `DEF 2 ${defs2}`;
+   document.querySelector("#meaning").innerHTML = `${defs2}`;
 };

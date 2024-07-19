@@ -25,8 +25,8 @@ body {
 }
 /* header */
 .header {
-   background-color: var(--light-color);
-   color: var(--darkest-color);
+   background-color: var(--darkest-color);
+   color: var(--light-color);
    /* margin-bottom: 1.5rem; */
 }
 .titles {
@@ -201,12 +201,4 @@ footer a:hover {
       width: 90%;
       margin: 2rem auto;
    }
-   /* .addNote {
-       width: 30%;
-       height: 8rem;
-    }
-    .items {
-       width: 30%;
-       height: 8rem;
-    } */
 }

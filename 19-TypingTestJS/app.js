@@ -29,7 +29,7 @@ const paras = [
    "Those cowbells are nothing more than elements. This could be, or perhaps before stockings, thoughts were only opinions. A coil of the exclamation is assumed to be a hurtless toy. A board is the cast of a religion. In ancient times the first stinko sailboat is, in its own way, an exchange. Few can name a tutti channel that isn't a footless operation. Extending this logic, an oatmeal is the rooster of a shake. Those step-sons are nothing more than matches.",
 ];
 
-let maxTime = 6;
+let maxTime = 60;
 let running = false;
 let characterTyped = 0;
 let mistakes = 0;
@@ -95,7 +95,7 @@ context.addEventListener("input", function (params) {
    }
    //    adding delay to the place which user is AT currently
    characters.forEach((elem) => elem.classList.remove("activeChar"));
-      characters[typedChars.length].classList.add("activeChar");
+   characters[typedChars.length].classList.add("activeChar");
    characterTyped++;
    mistakes = 0;
    //    console.log(typedChars.length, "typedChars");
@@ -123,10 +123,8 @@ context.addEventListener("input", function (params) {
 reset.addEventListener("click", function (params) {
    maxTime = 60;
    updateQuote();
-
    clearInterval(timerVar);
    running = false;
-
    reset.blur();
    context.focus();
    wpm = 0;

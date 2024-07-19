@@ -26,8 +26,8 @@ body {
 }
 /* header */
 .header {
-   background-color: var(--light-color);
-   color: var(--darkest-color);
+   background-color: var(--darkest-color);
+   color: var(--lightest-color);
 }
 .titles {
    display: flex;
@@ -60,7 +60,7 @@ body {
    display: flex;
    flex-direction: column;
    margin: 2rem auto;
-   width: 60%;
+   width: 65%;
    background-color: var(--lightest-color);
    padding: 1rem;
    border-radius: 15px;
@@ -146,8 +146,9 @@ span {
    display: flex;
    align-items: center;
    justify-content: center;
-}.reset{
-    font-weight: 900;
+}
+.reset {
+   font-weight: 900;
 }
 .metric:last-child,
 .metric:nth-last-child(2) {
