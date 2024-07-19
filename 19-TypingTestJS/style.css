@@ -59,7 +59,7 @@ body {
 .container {
    display: flex;
    flex-direction: column;
-   margin: auto;
+   margin: 2rem auto;
    width: 60%;
    background-color: var(--lightest-color);
    padding: 1rem;
@@ -71,6 +71,7 @@ body {
 .subWrapper {
    padding: 2rem 2rem 0 2rem;
    border: 1px solid lightgrey;
+   border-radius: 10px;
 }
 /* .input-field {
    opacity: 0;
@@ -87,8 +88,8 @@ body {
    opacity: 0;
    z-index: -999;
 }
-span{
-    font-weight: 800;
+span {
+   font-weight: 800;
 }
 .correct {
    color: green;
@@ -100,26 +101,26 @@ span{
    font-weight: 500;
    background-color: rgba(255, 182, 193, 0.573);
 }
-/* .text span.activeChar {
-   color: #17a2b8;
-}
-.text span.activeChar::before {
-   position: absolute;
-   content: "";
-   height: 2px;
-   width: 100%;
-   bottom: 0;
-   left: 0;
-   opacity: 0;
-   border-radius: 5px;
-   background: #17a2b8;
-   animation: blink 1s ease-in-out infinite;
-}
-@keyframes blink {
-   50% {
-      opacity: 1;
+@keyframes changewidth {
+   from {
+      /* color: black; */
+      background-color: whitesmoke;
    }
-} */
+
+   to {
+      /* color: #17a2b8; */
+      background-color: #17a2b8;
+      /* background-color: whitesmoke; */
+   }
+}
+.text span.activeChar {
+   /* color: #17a2b8;
+   background-color: lightgray; */
+   animation-duration: 0.5s;
+   animation-name: changewidth;
+   animation-iteration-count: infinite;
+}
+
 .metrics {
    display: flex;
    justify-content: space-between;
@@ -136,6 +137,7 @@ span{
    display: flex;
    align-items: center;
    justify-content: center;
+   font-weight: 900;
 }
 .resetWrapper {
    width: 25%;
@@ -144,6 +146,8 @@ span{
    display: flex;
    align-items: center;
    justify-content: center;
+}.reset{
+    font-weight: 900;
 }
 .metric:last-child,
 .metric:nth-last-child(2) {
@@ -152,6 +156,10 @@ span{
 button {
    width: 100%;
    height: 100%;
+   background-color: #17a2b8;
+   color: var(--lightest-color);
+   border: 1px solid grey;
+   border-radius: 15px;
 }
 /* footer */
 .footer {

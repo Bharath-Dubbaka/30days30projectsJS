@@ -29,7 +29,7 @@ const paras = [
    "Those cowbells are nothing more than elements. This could be, or perhaps before stockings, thoughts were only opinions. A coil of the exclamation is assumed to be a hurtless toy. A board is the cast of a religion. In ancient times the first stinko sailboat is, in its own way, an exchange. Few can name a tutti channel that isn't a footless operation. Extending this logic, an oatmeal is the rooster of a shake. Those step-sons are nothing more than matches.",
 ];
 
-let maxTime = 10;
+let maxTime = 6;
 let running = false;
 let characterTyped = 0;
 let mistakes = 0;
@@ -72,6 +72,8 @@ const updateQuote = function (params) {
       spans.innerHTML = letter;
       text.appendChild(spans);
    });
+   let characters = text.querySelectorAll("span");
+   characters[0].classList.add("activeChar");
 };
 updateQuote();
 
@@ -91,8 +93,9 @@ context.addEventListener("input", function (params) {
          timeRunFN();
       }, 1000);
    }
-   //    characters.forEach((elem) => elem.classList.remove("activeChar"));
-   //    characters[typedChars.length].classList.add("activeChar");
+   //    adding delay to the place which user is AT currently
+   characters.forEach((elem) => elem.classList.remove("activeChar"));
+      characters[typedChars.length].classList.add("activeChar");
    characterTyped++;
    mistakes = 0;
    //    console.log(typedChars.length, "typedChars");
@@ -118,7 +121,7 @@ context.addEventListener("input", function (params) {
 });
 
 reset.addEventListener("click", function (params) {
-   maxTime = 10;
+   maxTime = 60;
    updateQuote();
 
    clearInterval(timerVar);
@@ -127,9 +130,9 @@ reset.addEventListener("click", function (params) {
    reset.blur();
    context.focus();
    wpm = 0;
-   wpmDiv.innerHTML = wpm;
+   wpmDiv.innerHTML = `WPM:${wpm}`;
    mistakes = 0;
-   mistakesDiv.innerHTML = mistakes;
-//    reset.disabled = false;
+   mistakesDiv.innerHTML = `Errors:${mistakes}`;
+   //    reset.disabled = false;
    context.disabled = false;
 });
