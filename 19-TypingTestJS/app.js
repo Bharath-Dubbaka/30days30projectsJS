@@ -4,7 +4,7 @@ const mistakesDiv = document.querySelector(".mistakesDiv");
 const reset = document.querySelector(".reset");
 const text = document.querySelector(".text");
 const wpmDiv = document.querySelector(".wpmDiv");
-const cpmDiv = document.querySelector(".cpmDiv");
+// const cpmDiv = document.querySelector(".cpmDiv");
 
 const paras = [
    "Authors often misinterpret the lettuce as a folklore rabbi, when in actuality it feels more like an uncursed bacon. Pursued distances show us how mother-in-laws can be charleses. Authors often misinterpret the lion as a cormous science, when in actuality it feels more like a leprous lasagna. Recent controversy aside, their band was, in this moment, a racemed suit. The clutch of a joke becomes a togaed chair. The first pickled chess is.",
@@ -29,36 +29,36 @@ const paras = [
    "Those cowbells are nothing more than elements. This could be, or perhaps before stockings, thoughts were only opinions. A coil of the exclamation is assumed to be a hurtless toy. A board is the cast of a religion. In ancient times the first stinko sailboat is, in its own way, an exchange. Few can name a tutti channel that isn't a footless operation. Extending this logic, an oatmeal is the rooster of a shake. Those step-sons are nothing more than matches.",
 ];
 
-let maxTime = 9;
+let maxTime = 10;
 let running = false;
 let characterTyped = 0;
 let mistakes = 0;
 let wpm = 0;
-// let timeRunFN = function (params) {
-setInterval(() => {
+let correctWords = 0;
+let timerVar = null;
+
+let timeRunFN = function (params) {
+   // setInterval(() => {
+
    if (maxTime > 0 && running) {
       maxTime--;
       //   console.log(maxTime);
-      timer.innerHTML = `Time Left: ${maxTime}`;
+      timer.innerHTML = `Timeleft:${maxTime}`;
       reset.disabled = true;
       context.disabled = false;
-      mistakesDiv.innerHTML = `Mistakes: ${mistakes}`;
-      wpmDiv.innerHTML = `WPM: ${wpm}`;
-   }
-   if (maxTime <= 0) {
-      running = false;
-      maxTime = 9;
+      mistakesDiv.innerHTML = `Errors:${mistakes}`;
+      wpmDiv.innerHTML = `WPM:${wpm}`;
+   } else {
       context.blur();
       reset.disabled = false;
       context.disabled = true;
-      document.removeEventListener("keydown", keydownAction);
+      //   document.removeEventListener("keydown", keydownAction);
    }
-}, 1000);
+   console.log("running ggg ");
+};
 // };
 let keydownAction = function (params) {
    context.focus();
-   running = true;
-   //   timeRunFN();
 };
 
 const updateQuote = function (params) {
@@ -78,7 +78,19 @@ updateQuote();
 context.addEventListener("input", function (params) {
    let characters = text.querySelectorAll("span");
    let typedChars = context.value.split("");
-   wpm = context.value.split(" ").length;
+   //    calcuklating WPM
+   let wpmLen = context.value.length;
+   //    /5 bcz we define a “word” as any five characters, including spaces, numbers, letters, and punctuation
+   // REF:https://www.typetolearn.app/knowledge-base/how-words-per-minute-and-accuracy-are-calculated/#:~:text=Calculating%20Words%20per%20Minute%20(WPM)&text=Therefore%2C%20the%20number%20of%20words,elapsed%20time%20(in%20minutes).
+   wpm = wpmLen / 5 / 1;
+   console.log(wpmLen / 5, wpmLen);
+   if (!running) {
+      running = true;
+      console.log(running, "RUN");
+      timerVar = setInterval(() => {
+         timeRunFN();
+      }, 1000);
+   }
    //    characters.forEach((elem) => elem.classList.remove("activeChar"));
    //    characters[typedChars.length].classList.add("activeChar");
    characterTyped++;
@@ -100,12 +112,24 @@ context.addEventListener("input", function (params) {
          mistakes++;
       }
    });
+   //    let calcWPM = function (params) {
+
+   //    }
 });
 
 reset.addEventListener("click", function (params) {
-   maxTime = 9;
+   maxTime = 10;
    updateQuote();
+
+   clearInterval(timerVar);
+   running = false;
 
    reset.blur();
    context.focus();
+   wpm = 0;
+   wpmDiv.innerHTML = wpm;
+   mistakes = 0;
+   mistakesDiv.innerHTML = mistakes;
+//    reset.disabled = false;
+   context.disabled = false;
 });
