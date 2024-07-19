@@ -25,8 +25,8 @@ body {
 }
 /* header */
 .header {
-   background-color: var(--light-color);
-   color: var(--darkest-color);
+   background-color: var(--darkest-color);
+   color: var(--light-color);
    /* margin-bottom: 1.5rem; */
 }
 .titles {
