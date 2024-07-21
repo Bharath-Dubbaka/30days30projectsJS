@@ -47,7 +47,7 @@ btn.addEventListener("click", function (params) {
       // we are doing todayMonth - 2 bcz we already added +1 to todayMonth
       // which was originally 0 index and as the we need to backtrack one month so intotal -2 in array
       calcDay = months[todayMonth - 2] + calc;
-      // so that month doesn't go negative
+      // so that month doesn't go negative, eg if month was 0 and we do calcMonth-- it will be -1
       if (calcMonth < 0) {
          calcMonth = 11;
          calcYear--;
@@ -56,7 +56,6 @@ btn.addEventListener("click", function (params) {
    monthsOutput.innerHTML = calcMonth;
    yearsOutput.innerHTML = calcYear;
    daysOutput.innerHTML = calcDay;
-   console.log(enteredDOBarray);
-
-   console.log(todayDate, todayMonth, todayYear);
+   // console.log(enteredDOBarray);
+   // console.log(todayDate, todayMonth, todayYear);
 });
