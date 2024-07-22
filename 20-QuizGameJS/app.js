@@ -5,3 +5,4 @@
 // const text = document.querySelector(".text");
 // const wpmDiv = document.querySelector(".wpmDiv");
 // // const cpmDiv = document.querySelector(".cpmDiv");
+ 

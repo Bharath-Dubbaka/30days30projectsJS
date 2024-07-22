@@ -11,8 +11,8 @@
 :root {
    --lightest-color: ghostwhite;
    --light-color: #ffffff;
-   --highlight-color: #1c658c;
-   --secondary-highlight-color: darkorange;
+   --secondary-highlight-color: #2a323c;
+   --highlight-color: #1d232a;
    --dark-color: #154751;
    --darkest-color: black;
 }
@@ -61,9 +61,37 @@ body {
    flex-direction: column;
    margin: 2rem auto;
    width: 65%;
-   background-color: var(--lightest-color);
+   background-color: var(--highlight-color);
+   color: azure;
    padding: 1rem;
    border-radius: 15px;
+   text-align: center;
+}
+.container .topNote {
+   margin: 1rem;
+   font-weight: 600;
+}
+.container .quizes {
+   margin: 1rem;
+}
+.quizes .quizBtn {
+   margin: auto 5px;
+   width: 4.5rem;
+   height: 2.5rem;
+   font-weight: 800;
+   border-radius: 10px;
+}
+#quizBtnOne {
+   background-color: lightsteelblue;
+   color: var(--dark-color);
+}
+#quizBtnTwo {
+   background-color: lightyellow;
+   color: var(--dark-color);
+}
+#quizBtnThree {
+   color: var(--dark-color);
+   background-color: lightpink;
 }
 
 /* footer */
