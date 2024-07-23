@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Quiz One</title>
+      <link rel="stylesheet" href="../style.css" />
+   </head>
+   <body>
+      <div class="container rulesMain activeTab">
+         <div class="topNote">Rules:</div>
+         <div class="rulesList">
+            <div class="rules">1. Max time to solve quiz is 120 sec</div>
+            <div class="rules">2. Max time to solve one question is 30 sec</div>
+         </div>
+         <button class="iUnderstandBtn">I Understand</button>
+      </div>
+      <div class="container questionsMain inActiveTab">
+         <div class="topNote quesAndTime">
+            <div class="questionHead">Question:</div>
+            <div class="timer">Time left: 1</div>
+         </div>
+         <hr style="width: 100%" />
+         <div class="questionWrap"></div>
+         <div class="optionsWrap"></div>
+      </div>
+      <script type="module" src="quizOne.js"></script>
+   </body>
+</html>

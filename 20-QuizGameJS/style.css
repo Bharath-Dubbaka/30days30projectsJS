@@ -24,52 +24,23 @@ body {
    display: flex;
    flex-direction: column;
 }
-/* header */
-.header {
-   background-color: var(--darkest-color);
-   color: var(--lightest-color);
-}
-.titles {
-   display: flex;
-   width: 100%;
-   line-height: 1;
-}
-.title {
-   font-size: 1.5rem;
-   display: flex;
-   margin: 1rem;
-   width: 60%;
-   font-family: "Comfortaa", cursive;
-   font-size: 1.5rem;
-   font-weight: 800;
-}
-.subtitle {
-   font-size: 0.99rem;
-   display: flex;
-   justify-content: end;
-   align-items: center;
-   margin: 1rem;
-   width: 40%;
-   font-family: "Comfortaa", cursive;
-   font-size: 1.3rem;
-   font-weight: 800;
-   text-align: end;
-   align-items: end;
-}
 .container {
    display: flex;
    flex-direction: column;
-   margin: 2rem auto;
+   margin: auto;
    width: 65%;
    background-color: var(--highlight-color);
    color: azure;
    padding: 1rem;
    border-radius: 15px;
    text-align: center;
+   align-items: center;
 }
 .container .topNote {
    margin: 1rem;
    font-weight: 600;
+   font-size: 2rem;
+   display: flex;
 }
 .container .quizes {
    margin: 1rem;
@@ -94,30 +65,28 @@ body {
    background-color: lightpink;
 }
 
-/* footer */
-.footer {
-   padding: 10px;
-   padding: 0.6rem;
-   background-color: var(--darkest-color);
-   font-size: 0.75em;
-   text-align: center;
-   width: 100%;
-   margin-top: auto;
+/* QUIZ ONE CSS */
+.inActiveTab {
+   display: none;
 }
-footer a {
-   padding-bottom: 1px;
-   border: 0;
-   color: var(--lightest-color);
-   text-decoration: none;
+.activeTab {
+   display: flex;
+}
+.iUnderstandBtn {
+   width: 30%;
+   margin: 2rem auto 1rem auto;
+   font-size: 1.4rem;
    font-weight: 600;
-   font-style: italic;
 }
-footer a:active,
-footer a:focus,
-footer a:hover {
-   color: var(--secondary-highlight-color);
-   text-decoration: underline;
+.iUnderstandBtn:hover {
+   background-color: lightgray;
 }
+.quesAndTime {
+   display: flex;
+   width: 100%;
+   justify-content: space-between;
+}
+
 /* MEdia queries  */
 /* for Tablet */
 @media (max-width: 775px) {
@@ -130,7 +99,7 @@ footer a:hover {
    }
    .container {
       width: 90%;
-      margin: 2rem auto;
+      margin: auto;
    }
 }
 
@@ -149,6 +118,14 @@ footer a:hover {
    }
    .container {
       width: 90%;
-      margin: 2rem auto;
+      margin: auto;
+   }
+   .container.quizes {
+      width: 100%;
+      margin: 0;
+   }
+   .quizes .quizBtn {
+      width: 32%;
+      margin: 0;
    }
 }
