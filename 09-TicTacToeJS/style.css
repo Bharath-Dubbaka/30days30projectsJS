@@ -1,251 +1,211 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
-    
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
 }
 :root {
-    --main-bg-color: darkorange;
-    --main-heading-color: whitesmoke;
+   --main-bg-color: darkorange;
+   --main-heading-color: whitesmoke;
 }
-body{
-    min-height: 100vh;
-    background-color: var(--main-bg-color);
-    display: flex;
-    flex-direction: column;
+body {
+   min-height: 100vh;
+   background-color: var(--main-bg-color);
+   display: flex;
+   flex-direction: column;
 }
 /* header */
 .header {
-    background-color:var(--main-heading-color);
-
+   background-color: var(--main-heading-color);
 }
-.titles{
-    display: flex;
-    width: 100%;
-    /* padding: 0.5rem; */
+.titles {
+   display: flex;
+   width: 100%;
+   /* padding: 0.5rem; */
 }
-.title{
-    font-size: 1.5rem;
-    display: flex;
-    /* justify-content: end; */
-    margin:1rem ;
-    width: 40%;
-    font-family: 'Comfortaa', cursive;
-
-
+.title {
+   font-size: 1.5rem;
+   display: flex;
+   /* justify-content: end; */
+   margin: 1rem;
+   width: 40%;
 }
-.subtitle{
-    font-size: 0.99rem;
-    display: flex;
-    /* text-align: center; */
-    justify-content: end;
-    align-items:center;
-    margin:1rem ;
-    /* padding:0.5rem; */
-    width: 60%;
-    font-family: 'Comfortaa', cursive;
-
+.subtitle {
+   font-size: 0.99rem;
+   display: flex;
+   /* text-align: center; */
+   justify-content: end;
+   align-items: center;
+   margin: 1rem;
+   /* padding:0.5rem; */
+   width: 60%;
 }
 
-
-.container{
-   scroll-behavior:smooth;
-    width: 100%;
-    /* min-height:5vh; */
-    /* height: 93vh; */
-    padding: 3% 0 3% 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.container {
+   scroll-behavior: smooth;
+   width: 100%;
+   /* min-height:5vh; */
+   /* height: 93vh; */
+   padding: 3% 0 3% 0;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
-.heading{
-    font-size: 1.3rem;
-    margin-bottom: 1.5rem;
-    font-style: oblique;
-    font-weight: bolder;
-    color: black;
-    border: 1px solid black;
-    /* background-color: #fff; */
-    border-radius: 10px;
-    padding: 0.5rem;
-    font-family: 'Permanent Marker', cursive;
+.heading {
+   font-size: 1.3rem;
+   margin-bottom: 1.5rem;
+   font-style: oblique;
+   font-weight: bolder;
+   color: black;
+   border: 1px solid black;
+   /* background-color: #fff; */
+   border-radius: 10px;
+   padding: 0.5rem;
+   font-family: "Permanent Marker", "Comfortaa", Tahoma, "Segoe UI";
 }
-.sides{
-    display: flex;
-    width: 100%;
-    /* padding: 1px; */
-    justify-content: space-evenly;
+.sides {
+   display: flex;
+   width: 100%;
+   /* padding: 1px; */
+   justify-content: space-evenly;
 }
-.content{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 15px;
-    border-radius: 15px;
-    /* background-color: white; */
-    width: 50%;
-    max-width: 20rem;
-    /* padding:1rem 1rem 1rem 1rem; */
-    /* color: white; */
-    margin: 0.1rem;
-    padding:1px;
-    /* justify-content: center; */
-    /* align-items: center;
+.content {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   border-radius: 15px;
+   border-radius: 15px;
+   /* background-color: white; */
+   width: 50%;
+   max-width: 20rem;
+   /* padding:1rem 1rem 1rem 1rem; */
+   /* color: white; */
+   margin: 0.1rem;
+   padding: 1px;
+   /* justify-content: center; */
+   /* align-items: center;
         justify-content: center; */
-
 }
-.row1{
-    width: 99%;
-    /* margin: 0.3rem; */
-    display: flex;
-    flex-direction: row;
-    /* padding: 1px; */
+.row1 {
+   width: 99%;
+   /* margin: 0.3rem; */
+   display: flex;
+   flex-direction: row;
+   /* padding: 1px; */
 }
-.row2{
-    width: 99%;
-    display: flex;
-    flex-direction: row;
-    /* margin: 0.3rem;
+.row2 {
+   width: 99%;
+   display: flex;
+   flex-direction: row;
+   /* margin: 0.3rem;
     padding: 1px; */
 }
-.row3{
-    width: 99%;
-    display: flex;
-    flex-direction: row;
-    /* margin: 0.3rem;
+.row3 {
+   width: 99%;
+   display: flex;
+   flex-direction: row;
+   /* margin: 0.3rem;
     padding: 1px; */
 }
 
-.box{
-    background-color: var(--main-heading-color);
-    width: 100%;
-    height: 5rem;
+.box {
+   background-color: var(--main-heading-color);
+   width: 100%;
+   height: 5rem;
 
-
-    display: flex;
-    /* text-align: center; */
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    margin: 0.3rem;
-    font-size: xx-large;
-    font-family: 'Permanent Marker', cursive;
-
+   display: flex;
+   /* text-align: center; */
+   justify-content: center;
+   align-items: center;
+   border-radius: 10px;
+   margin: 0.3rem;
+   font-size: xx-large;
+   font-family: "Permanent Marker", "Comfortaa", Tahoma, "Segoe UI";
 }
-.dashboard{
-    width: 40%;
-    max-width: 20rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* border: 1px solid saddlebrown; */
-    border-radius: 15px;
-    justify-content: space-evenly;
-    margin : 0.1rem;
+.dashboard {
+   width: 40%;
+   max-width: 20rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   /* border: 1px solid saddlebrown; */
+   border-radius: 15px;
+   justify-content: space-evenly;
+   margin: 0.1rem;
 }
-.status{
-    height: 30%;
-    width: 95%;
-    border: 3px solid black;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--main-heading-color);
-    font-size: 1rem;
-    font-family: 'Permanent Marker', cursive;
-
+.status {
+   height: 30%;
+   width: 95%;
+   border: 3px solid black;
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--main-heading-color);
+   font-size: 1rem;
+   font-family: "Permanent Marker", "Comfortaa", Tahoma, "Segoe UI";
 }
-.scoreboard{
-    display: flex;
-    justify-content: space-around;
-    text-align: center;
-    width: 95%;
-    height: 30%;
-    border: 3px solid black;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    background-color: var(--main-heading-color);
-    font-size: 1rem;
-
+.scoreboard {
+   display: flex;
+   justify-content: space-around;
+   text-align: center;
+   width: 95%;
+   height: 30%;
+   border: 3px solid black;
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   background-color: var(--main-heading-color);
+   font-size: 1rem;
 }
-.scoreboard .scoretitle{
-    font-size: 1rem;
-    font-family: 'Permanent Marker', cursive;
-
+.scoreboard .scoretitle {
+   font-size: 1rem;
+   font-family: "Permanent Marker", "Comfortaa", Tahoma, "Segoe UI";
 }
-.headNums{
-    font-family: 'Permanent Marker', cursive;
+.headNums {
+   font-family: "Permanent Marker", "Comfortaa", Tahoma, "Segoe UI";
 }
-.removeBtn{
-    height: 30%;
-    width: 95%;
-    border: 3px solid black;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--main-heading-color);
-    font-size: 1rem;
-    font-family: 'Permanent Marker', cursive;
-
+.removeBtn {
+   height: 30%;
+   width: 95%;
+   border: 3px solid black;
+   border-radius: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--main-heading-color);
+   font-size: 1rem;
+   font-family: "Permanent Marker", "Comfortaa", Tahoma, "Segoe UI";
 }
 
-
-/* Footer */
-.footer {
-    padding: 10px;
-    padding: 0.6rem;
-    background: black;
-    color: #CCC;
-    font-size: .75em;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-  }
-  
-  footer a {
-    padding-bottom: 1px;
-    border: 0;
-    color: #e5e5e5;
-    text-decoration: none;
-  }
-  
-  footer a:active, footer a:focus, footer a:hover {
-    color: #fff;
-    text-decoration: underline;
-  }
 
 /* MEdia queries  */
 @media (max-width: 639px) {
-    .titles{
-        padding: 0.3rem;
-    }
-    .title {
-        font-size: 1.2em;
-        width: 100%;
-        justify-content: center;
-    }
-    .subtitle{
-        display: none;
-    }
-    /* .container{
+   .titles {
+      padding: 0.3rem;
+   }
+   .title {
+      font-size: 1.2em;
+      width: 100%;
+      justify-content: center;
+   }
+   .subtitle {
+      display: none;
+   }
+   /* .container{
         min-height: 35rem;
     } */
-    .sides{
-        display: flex;
-        flex-direction: column;
-        /* justify-content: center; */
-        align-items: center;
-    }
-    .content{
-        width: 100%;
-    }
-    .dashboard{
-        width: 100%;
-    }
+   .sides {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; */
+      align-items: center;
+   }
+   .content {
+      width: 100%;
+   }
+   .dashboard {
+      width: 100%;
+   }
 }
-

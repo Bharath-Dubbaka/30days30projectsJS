@@ -41,7 +41,7 @@ body {
    /* justify-content: end; */
    margin: 1rem;
    width: 60%;
-   font-family: "Comfortaa", cursive;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
    font-size: 1.5rem;
    font-weight: 800;
 }
@@ -54,7 +54,7 @@ body {
    margin: 1rem;
    /* padding:0.5rem; */
    width: 40%;
-   font-family: "Comfortaa", cursive;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
    font-size: 1.3rem;
    font-weight: 800;
    text-align: end;

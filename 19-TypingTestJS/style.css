@@ -39,7 +39,7 @@ body {
    display: flex;
    margin: 1rem;
    width: 60%;
-   font-family: "Comfortaa", cursive;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
    font-size: 1.5rem;
    font-weight: 800;
 }
@@ -50,7 +50,7 @@ body {
    align-items: center;
    margin: 1rem;
    width: 40%;
-   font-family: "Comfortaa", cursive;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
    font-size: 1.3rem;
    font-weight: 800;
    text-align: end;
@@ -162,30 +162,10 @@ button {
    border: 1px solid grey;
    border-radius: 15px;
 }
-/* footer */
-.footer {
-   padding: 10px;
-   padding: 0.6rem;
-   background-color: var(--darkest-color);
-   font-size: 0.75em;
-   text-align: center;
-   width: 100%;
-   margin-top: auto;
-}
-footer a {
-   padding-bottom: 1px;
-   border: 0;
-   color: var(--lightest-color);
-   text-decoration: none;
-   font-weight: 600;
-   font-style: italic;
-}
-footer a:active,
-footer a:focus,
-footer a:hover {
-   color: var(--secondary-highlight-color);
-   text-decoration: underline;
-}
+
+
+
+
 /* MEdia queries  */
 /* for Tablet */
 @media (max-width: 775px) {

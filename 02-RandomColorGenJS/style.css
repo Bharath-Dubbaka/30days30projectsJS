@@ -1,121 +1,117 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-weight: bolder;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
+   font-weight: bolder;
 }
-body{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: whitesmoke;
+body {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background-color: whitesmoke;
 }
-.container{
-    text-align: center;
-
-}
-
-.heading{
-    font-size: 30px;
-    padding: 2% 0% 2% 0%;
-    font-family: 'Comfortaa', cursive;
-    color: #19172E;
-    background-color: lightgray;
+.container {
+   text-align: center;
 }
 
-.refreshandnote{
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 15px;
-    padding: 1% 0% 1% 0%;
-    align-items: center;
-    
+.heading {
+   font-size: 30px;
+   padding: 2% 0% 2% 0%;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
+   color: #19172e;
+   background-color: lightgray;
 }
-.refresh{
-    /* margin: 2%; */
-    padding: 2%;
 
-    /* height: 100%;
+.refreshandnote {
+   display: flex;
+   justify-content: space-evenly;
+   font-size: 15px;
+   padding: 1% 0% 1% 0%;
+   align-items: center;
+}
+.refresh {
+   /* margin: 2%; */
+   padding: 2%;
+
+   /* height: 100%;
     width: 100%; */
-    border-radius: 15px;
-    background-color: black;
-    border: 0.5px rgb(225, 245, 225) solid;
-    font-family: 'Comfortaa', cursive;
-    color: white;
-
-
+   border-radius: 15px;
+   background-color: black;
+   border: 0.5px rgb(225, 245, 225) solid;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
+   color: white;
 }
 /* .refrbtn{ */
-    /* padding: 15%; */
-    /* min-height: max-content; */
-    /* border-radius: 15px;
+/* padding: 15%; */
+/* min-height: max-content; */
+/* border-radius: 15px;
     background-color: #cb3b3b; */
-    /* height: 10rem; */
-    /* display: flex;
+/* height: 10rem; */
+/* display: flex;
     justify-content: center;
     align-items: center; */
 /* } */
-.note{
-    background-color: black;
-    padding: 2%;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center; /* Align horizontal */
-    align-items: center; /* Align vertical */
-    font-family: 'Comfortaa', cursive;
-    color: white;
-
+.note {
+   background-color: black;
+   padding: 2%;
+   border-radius: 15px;
+   display: flex;
+   justify-content: center; /* Align horizontal */
+   align-items: center; /* Align vertical */
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
+   color: white;
 }
-.refresh:hover{
-    background-color: rgb(32, 178, 61);
-    color: #19172E;
+.refresh:hover {
+   background-color: rgb(32, 178, 61);
+   color: #19172e;
 }
-.boxes{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.boxes {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
-.box{
-    width: 30%;
-    border-radius: 15px;    
-    height: 8rem;
-    /* text-align: center; */
-    margin: 1px;
-    /* line-height: 5rem; */
-    /* OR you can do above if you have assigned value to height */
-    display: flex;
-    justify-content: center; /* Align horizontal */
-    align-items: center; /* Align vertical */
-    font-family: 'Comfortaa', cursive;
-    color: black;
-    font-weight: 600;
+.box {
+   width: 30%;
+   border-radius: 15px;
+   height: 8rem;
+   /* text-align: center; */
+   margin: 1px;
+   /* line-height: 5rem; */
+   /* OR you can do above if you have assigned value to height */
+   display: flex;
+   justify-content: center; /* Align horizontal */
+   align-items: center; /* Align vertical */
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
+   color: black;
+   font-weight: 600;
 }
 
 .footer {
-    padding: 10px;
-    padding: 0.6rem;
-    background-color:black;
-    font-size: .75em;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-    
-  }
-  
-  footer a {
-    padding-bottom: 1px;
-    border: 0;
-    color: lightgray;
-    text-decoration: none;
-  }
-  
-  footer a:active, footer a:focus, footer a:hover {
-    color: white;
-    text-decoration: underline;
-  }
+   padding: 10px;
+   padding: 0.6rem;
+   background-color: black;
+   font-size: 0.75em;
+   text-align: center;
+   width: 100%;
+   margin-top: auto;
+}
 
-  /* .social{
+footer a {
+   padding-bottom: 1px;
+   border: 0;
+   color: lightgray;
+   text-decoration: none;
+}
+
+footer a:active,
+footer a:focus,
+footer a:hover {
+   color: white;
+   text-decoration: underline;
+}
+
+/* .social{
     background-color: black;
     color: goldenrod;
   }

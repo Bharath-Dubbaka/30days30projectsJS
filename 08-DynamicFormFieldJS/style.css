@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Comfortaa', cursive;
+    font-family: "Comfortaa", Tahoma, "Segoe UI";
     /* color: white; */
 }
 :root{
@@ -37,7 +37,6 @@ body{
     /* justify-content: end; */
     margin:1rem ;
     width: 60%;
-    font-family: 'Comfortaa', cursive;
     font-size: 1.5rem;
     font-weight: 800;
 
@@ -51,7 +50,6 @@ body{
     margin:1rem ;
     /* padding:0.5rem; */
     width: 40%;
-    font-family: 'Comfortaa', cursive;
     font-size: 1.3rem;
     font-weight: 800;
     text-align: end;
@@ -146,31 +144,6 @@ button{
     background-color:var(--darkest-color);
     color:  #ee052c72;
 }
-
-
-/* footer */
-.footer {
-    padding: 10px;
-    padding: 0.6rem;
-    background: black;
-    color: #CCC;
-    font-size: .75em;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-  }
-  
-  footer a {
-    padding-bottom: 1px;
-    border: 0;
-    color: #e5e5e5;
-    text-decoration: none;
-  }
-  
-  footer a:active, footer a:focus, footer a:hover {
-    color: darkorange;
-    text-decoration: underline;
-  }
 
 
   /* MEdia queries  */

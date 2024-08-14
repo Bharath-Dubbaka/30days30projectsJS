@@ -3,7 +3,7 @@
 *::before {
    padding: 0;
    margin: 0;
-   font-family: "Comfortaa", cursive;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
    box-sizing: border-box;
 }
 /* boilerplate CSS with header and basic start styles */
@@ -41,7 +41,6 @@ body {
    /* justify-content: end; */
    margin: 1rem;
    width: 60%;
-   /* font-family: 'Comfortaa', cursive; */
    font-size: 1.5rem;
    font-weight: 800;
 }
@@ -54,7 +53,6 @@ body {
    margin: 1rem;
    /* padding:0.5rem; */
    width: 40%;
-   /* font-family: 'Comfortaa', cursive; */
    font-size: 1.3rem;
    font-weight: 800;
    text-align: end;
@@ -132,32 +130,7 @@ body {
 .back i{
     height: auto;
 } */
-/* footer */
-.footer {
-   padding: 10px;
-   padding: 0.6rem;
-   background-color: var(--darkest-color);
-   font-size: 0.75em;
-   text-align: center;
-   width: 100%;
-   margin-top: auto;
-}
 
-footer a {
-   padding-bottom: 1px;
-   border: 0;
-   color: var(--lightest-color);
-   text-decoration: none;
-   font-weight: 600;
-   font-style: italic;
-}
-
-footer a:active,
-footer a:focus,
-footer a:hover {
-   color: var(--highlight-color);
-   text-decoration: underline;
-}
 
 /* MEdia queries  */
 /* for Tablet */

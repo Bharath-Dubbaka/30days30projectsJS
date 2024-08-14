@@ -1,256 +1,219 @@
-*, *::after, *::before{
-    padding: 0;
-    margin: 0;
-    font-family: 'Comfortaa', cursive;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   font-family: "Comfortaa", Tahoma, "Segoe UI";
+   box-sizing: border-box;
 }
 /* boilerplate CSS with header and basic start styles */
-:root{
-    --lightest-color: ghostwhite;
-    --light-color:#f8f0e3;
-    --dark-color:lightgrey;
-    --darkest-color:black;
-    --hightlight-color:darkorange;
-    --secodary-highlight-color: #252339;
+:root {
+   --lightest-color: ghostwhite;
+   --light-color: #f8f0e3;
+   --dark-color: lightgrey;
+   --darkest-color: black;
+   --hightlight-color: darkorange;
+   --secodary-highlight-color: #252339;
 }
-body{
-    min-height: 100vh;
-    background-color: var(--hightlight-color);
-    /* below display flex is for footer to be at bottom*/
-    display: flex;
-    flex-direction: column;
+body {
+   min-height: 100vh;
+   background-color: var(--hightlight-color);
+   /* below display flex is for footer to be at bottom*/
+   display: flex;
+   flex-direction: column;
 }
 /* header */
 .header {
-    background-color:var(--lightest-color);
-    color: var(--darkest-color);
-    /* margin-bottom: 1.5rem; */
-
-
+   background-color: var(--lightest-color);
+   color: var(--darkest-color);
+   /* margin-bottom: 1.5rem; */
 }
-.titles{
-    display: flex;
-    width: 100%;
-    /* padding: 0.5rem; */
-    line-height: 1;
+.titles {
+   display: flex;
+   width: 100%;
+   /* padding: 0.5rem; */
+   line-height: 1;
 }
-.title{
-    font-size: 1.5rem;
-    display: flex;
-    /* justify-content: end; */
-    margin:1rem ;
-    width: 60%;
-    /* font-family: 'Comfortaa', cursive; */
-    font-size: 1.5rem;
-    font-weight: 800;
-
+.title {
+   font-size: 1.5rem;
+   display: flex;
+   /* justify-content: end; */
+   margin: 1rem;
+   width: 60%;
+   font-size: 1.5rem;
+   font-weight: 800;
 }
-.subtitle{
-    font-size: 0.99rem;
-    display: flex;
-    /* text-align: center; */
-    justify-content: end;
-    align-items:center;
-    margin:1rem ;
-    /* padding:0.5rem; */
-    width: 40%;
-    /* font-family: 'Comfortaa', cursive; */
-    font-size: 1.3rem;
-    font-weight: 800;
-    text-align: end;
-    align-items: end;
+.subtitle {
+   font-size: 0.99rem;
+   display: flex;
+   /* text-align: center; */
+   justify-content: end;
+   align-items: center;
+   margin: 1rem;
+   /* padding:0.5rem; */
+   width: 40%;
+   font-size: 1.3rem;
+   font-weight: 800;
+   text-align: end;
+   align-items: end;
 }
-.clock{
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    /* min-height: 100vh; */
-    color: var(--secodary-highlight-color);
-    margin: 2rem auto;
-    width: 20rem;
-    height: 20rem;
-    border-radius: 50%;
-    /* enable below for chrome extension style */
-    /* width: 50rem;*/
-    /* border: 1px white solid;  */
-    background-color: var(--lightest-color);
-    /* padding: 2rem; */
-    position: relative;
-    border: 1px solid var(--darkest-color);
+.clock {
+   display: flex;
+   flex-direction: column;
+   /* align-items: center; */
+   /* min-height: 100vh; */
+   color: var(--secodary-highlight-color);
+   margin: 2rem auto;
+   width: 20rem;
+   height: 20rem;
+   border-radius: 50%;
+   /* enable below for chrome extension style */
+   /* width: 50rem;*/
+   /* border: 1px white solid;  */
+   background-color: var(--lightest-color);
+   /* padding: 2rem; */
+   position: relative;
+   border: 1px solid var(--darkest-color);
 }
 
-
-.clock .timeNumb{
-    width: 100%;
-    height: 100%;
-    /* background-color: aqua; */
-    position: absolute;
-    text-align: center;
-    font-weight: 900;
-    font-size: 1.3rem;
+.clock .timeNumb {
+   width: 100%;
+   height: 100%;
+   /* background-color: aqua; */
+   position: absolute;
+   text-align: center;
+   font-weight: 900;
+   font-size: 1.3rem;
 }
 
-.clock .time12{
-    transform: rotate(0deg);
-        /* background-color: red; */
-
+.clock .time12 {
+   transform: rotate(0deg);
+   /* background-color: red; */
 }
-.clock .time11{
-    transform: rotate(330deg);
-        /* background-color: pink; */
-
+.clock .time11 {
+   transform: rotate(330deg);
+   /* background-color: pink; */
 }
-.clock .time10{
-    transform: rotate(300deg);
+.clock .time10 {
+   transform: rotate(300deg);
 }
-.clock .time9{
-    transform: rotate(270deg);
+.clock .time9 {
+   transform: rotate(270deg);
 }
-.clock .time8{
-    transform: rotate(240deg);
+.clock .time8 {
+   transform: rotate(240deg);
 }
-.clock .time7{
-    transform: rotate(210deg);
+.clock .time7 {
+   transform: rotate(210deg);
 }
-.clock .time6{
-    transform: rotate(180deg);
+.clock .time6 {
+   transform: rotate(180deg);
 }
-.clock .time5{
-    transform: rotate(150deg);
+.clock .time5 {
+   transform: rotate(150deg);
 }
-.clock .time4{
-    transform: rotate(120deg);
+.clock .time4 {
+   transform: rotate(120deg);
 }
-.clock .time3{
-    transform: rotate(90deg);
+.clock .time3 {
+   transform: rotate(90deg);
 }
-.clock .time2{
-    transform: rotate(60deg);
+.clock .time2 {
+   transform: rotate(60deg);
 }
-.clock .time1{
-    transform: rotate(30deg);
-        /* background-color: green; */
+.clock .time1 {
+   transform: rotate(30deg);
+   /* background-color: green; */
 }
 
-
-.hands{
-    /* display: flex;
+.hands {
+   /* display: flex;
     justify-content: center;
     align-items: center;
     margin: auto; */
-    position: absolute;
-    /* width: 10px; */
-    background-color: black;
+   position: absolute;
+   /* width: 10px; */
+   background-color: black;
 }
-.hours{
-    width: 3.5%;
-    height: 23%;
-    top: 26.5%;
-    left: 48.75%;
-    /* display: none; */
-    transform-origin: bottom;
-    background-color: orange;
-    border-radius: 25px;
-    border: 5px solid black;
-
-
+.hours {
+   width: 3.5%;
+   height: 23%;
+   top: 26.5%;
+   left: 48.75%;
+   /* display: none; */
+   transform-origin: bottom;
+   background-color: orange;
+   border-radius: 25px;
+   border: 5px solid black;
 }
-.minutes{
-    width: 2%;
-    height: 32%;
-    top: 17%;
-    left: 50%;
-    background-color: var(--darkest-color);
-    transform-origin: bottom;
-    border-radius: 15px;
-
-
+.minutes {
+   width: 2%;
+   height: 32%;
+   top: 17%;
+   left: 50%;
+   background-color: var(--darkest-color);
+   transform-origin: bottom;
+   border-radius: 15px;
 }
-.seconds{
-    width: 1%;
-    height: 40%;
-    top: 9%;
-    left: 50%;
-    background-color:var(--darkest-color);
-    transform-origin: bottom;
-    /* display: none; */
+.seconds {
+   width: 1%;
+   height: 40%;
+   top: 9%;
+   left: 50%;
+   background-color: var(--darkest-color);
+   transform-origin: bottom;
+   /* display: none; */
 }
-.dotcenter{
-    width: 20px;
-    height: 20px;
-    background-color: var(--hightlight-color);
-    border-radius: 50%;
-    position: absolute;
-    left: 47.5%;
-    bottom: 47.5%;
-    border: 5px solid var(--darkest-color);
+.dotcenter {
+   width: 20px;
+   height: 20px;
+   background-color: var(--hightlight-color);
+   border-radius: 50%;
+   position: absolute;
+   left: 47.5%;
+   bottom: 47.5%;
+   border: 5px solid var(--darkest-color);
 }
 
-/* footer */
-.footer {
-    padding: 10px;
-    padding: 0.6rem;
-    background-color: var(--darkest-color);
-    font-size: .75em;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;
-  }
-  
-  footer a {
-    padding-bottom: 1px;
-    border: 0;
-    color: var(--lightest-color);
-    text-decoration: none;
-    font-weight: 600;
-    font-style: italic;
-  }
-  
-  footer a:active, footer a:focus, footer a:hover {
-    color: darkorange;
-    text-decoration: underline;
-  }
 
-
-  /* MEdia queries  */
-  /* for Tablet */
+/* MEdia queries  */
+/* for Tablet */
 @media (max-width: 775px) {
-    .heading{
-        font-size: 1.3rem;
-        margin-bottom: 1rem;
-    }
-    .welcomeNote{
-        font-size: 1.1rem;
-    }
-    .hours{    
-        border: 4.5px solid black;
-    }
+   .heading {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+   }
+   .welcomeNote {
+      font-size: 1.1rem;
+   }
+   .hours {
+      border: 4.5px solid black;
+   }
 }
 
 /* for mobile */
 @media (max-width: 475px) {
-    .titles{
-        padding: 0.3rem;
-    }
-    .title {
-        font-size: 1.3em;
-        width: 100%; 
-        justify-content: center;
-    }
-    .subtitle{
-        display: none;
-    }
-    .clock{
-        width: 15rem;
-        height: 15rem;
-        margin: 2rem auto;
-
-    }
-    .hours{    
-        border: 3px solid black;
-    }
-    .dotcenter{
-        top: 45.5%;
-        left: 46.5%;
-    }
+   .titles {
+      padding: 0.3rem;
+   }
+   .title {
+      font-size: 1.3em;
+      width: 100%;
+      justify-content: center;
+   }
+   .subtitle {
+      display: none;
+   }
+   .clock {
+      width: 15rem;
+      height: 15rem;
+      margin: 2rem auto;
+   }
+   .hours {
+      border: 3px solid black;
+   }
+   .dotcenter {
+      top: 45.5%;
+      left: 46.5%;
+   }
 }
